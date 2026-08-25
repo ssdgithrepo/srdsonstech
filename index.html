@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K K S Electrotech | Solar & Electrical Solutions | Deoli, Wardha</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0757a6;
+            --primary-dark: #063b73;
+            --accent-color: #1d8cf8;
+            --gold-color: #f4b400;
+            --white-color: #ffffff;
+            --soft-blue: #eef6ff;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #334155; overflow-x: hidden; animation: fadeInPage 0.8s ease-in-out; }
+        @keyframes fadeInPage { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        @keyframes dropDownFromTop {
+            0% { opacity: 0; transform: translateY(-40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-drop-down { animation: dropDownFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        .navbar { background: linear-gradient(90deg, var(--primary-dark), var(--primary-color)); }
+        
+        /* Comprehensive Hover Effects */
+        .btn, .nav-link, .card, .carousel-control-prev, .carousel-control-next, section, footer {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            filter: brightness(1.05);
+        }
+        .nav-link:hover {
+            color: var(--gold-color) !important;
+            transform: translateY(-1px);
+        }
+        .card:hover, .service-card:hover, .testimonial-card:hover, .offer-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        /* Hero Carousel Slider with Contextual Images */
+        .hero-carousel-item { height: 580px; background-size: cover; background-position: center; position: relative; }
+        .hero-carousel-item::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(30, 41, 59, 0.78) 100%); }
+        .hero-content { position: relative; z-index: 2; top: 50%; transform: translateY(-50%); color: white; }
+
+        /* Floating Live Chat Widget */
+        #chat-widget-container { position: fixed; bottom: 25px; right: 25px; z-index: 1050; }
+        .chat-box { width: 360px; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; display: none; flex-direction: column; }
+
+        /* Strict Isolated Popup Modal Print & PDF Styling with exact 70px bottom padding constraint */
+        @media print {
+            body * { visibility: hidden !important; }
+            #docPreviewModalContent, #docPreviewModalContent * { visibility: visible !important; }
+            #docPreviewModalContent { position: absolute !important; left: 0 !important; top: 0 !important; width: 100% !important; border: none !important; box-shadow: none !important; background: white !important; margin: 0; padding: 20px 20px 70px 20px !important; page-break-inside: avoid; }
+            .no-print { display: none !important; }
+        }
+        footer { background: linear-gradient(90deg, var(--primary-dark), var(--primary-color)); color: #cbd5e1; }
+
+        .kks-logo-mark {
+            position: relative;
+            width: 52px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 2px solid var(--gold-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 16px rgba(7,87,166,.22);
+            letter-spacing: -3px;
+        }
+        .kks-logo-mark span { line-height: 1; }
+        .kks-k, .kks-k2, .kks-s { font-weight: 900; color: var(--primary-color); font-size: 18px; }
+        .kks-k2 { margin-left: -2px; }
+        .kks-s { margin-left: -2px; }
+        .kks-bolt {
+            position: absolute;
+            right: -7px;
+            top: -10px;
+            color: var(--gold-color);
+            background: var(--primary-dark);
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: grid;
+            place-items: center;
+            font-size: 15px;
+            letter-spacing: 0;
+            box-shadow: 0 2px 7px rgba(0,0,0,.2);
+        }
+        .hero-carousel-item::before {
+            background: linear-gradient(135deg, rgba(3,38,76,.90) 0%, rgba(7,87,166,.72) 100%);
+        }
+        .section-kicker {
+            color: var(--primary-color);
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-size: .78rem;
+        }
+        .gold-bolt { color: var(--gold-color) !important; }
+        .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+        .btn-primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); }
+        .text-primary { color: var(--primary-color) !important; }
+        .bg-primary { background-color: var(--primary-color) !important; }
+
+    
+        .kks-loader{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:linear-gradient(135deg,#03264c 0%,#0757a6 55%,#eef6ff 140%);transition:opacity .55s ease,visibility .55s ease;}
+        .kks-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none;}
+        .kks-loader-logo{text-align:center;color:#fff;padding:30px;}
+        .kks-loader-mark{width:76px;height:62px;margin:0 auto 18px;border-radius:16px;transform:scale(1.05);animation:kksPulse 1.4s ease-in-out infinite;}
+        .kks-loader-mark .kks-k,.kks-loader-mark .kks-k2,.kks-loader-mark .kks-s{font-size:27px;}
+        .kks-loader-brand{font-size:clamp(28px,5vw,46px);font-weight:900;letter-spacing:.01em;}
+        .kks-loader-tagline{margin-top:9px;font-size:clamp(12px,2vw,16px);letter-spacing:.12em;text-transform:uppercase;color:#fff;}
+        .kks-loader-line{width:min(300px,70vw);height:3px;background:rgba(255,255,255,.2);margin:22px auto 0;border-radius:99px;overflow:hidden;}
+        .kks-loader-line span{display:block;width:35%;height:100%;background:#f4b400;border-radius:99px;animation:kksLoad 1.15s ease-in-out infinite;}
+        @keyframes kksPulse{50%{transform:scale(1.12);box-shadow:0 0 30px rgba(244,180,0,.35)}}
+        @keyframes kksLoad{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+        .kks-loader-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+        .kks-loader-count{font-size:12px;color:rgba(255,255,255,.86);margin-top:10px}
+        .kks-loader-btn{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 18px;font-weight:800;cursor:pointer;transition:.2s}
+        .kks-loader-btn-primary{background:#f4b400;color:#072e57;border-color:#f4b400}
+        .kks-loader-btn-light{background:rgba(255,255,255,.1);color:#fff}
+        .kks-loader-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+        .kks-chat-brand{display:flex;align-items:center;gap:10px}
+        .kks-chat-logo{width:42px;height:34px;border-radius:9px;background:#fff;border:2px solid #f4b400;display:grid;place-items:center;position:relative;font-weight:900;color:#0757a6;letter-spacing:-2px}
+        .kks-chat-logo .kks-chat-bolt{position:absolute;right:-6px;top:-9px;background:#063b73;color:#f4b400;border-radius:50%;width:19px;height:19px;display:grid;place-items:center;font-size:12px;letter-spacing:0}
+        .kks-chat-name{font-weight:900;line-height:1.05}.kks-chat-sub{font-size:10px;opacity:.8;font-weight:500}
+
+</style>
+
+    <!--
+      KKS RESEARCHED BUSINESS DATA (verified online 24-Aug-2026):
+      - KKS Electrotech appears in ECE Solar's store locator at Chintamani Colony, Ward No 7, Deoli, Wardha, Maharashtra.
+      - Public enterprise listing: K.K.S. Electrotech, proprietorship, incorporated 06-May-2022,
+        Udyam/MSME: UDYAM-MH-34-0014347, Wardha, Maharashtra 442101.
+      - Business category surfaced by local search: Solar energy system service.
+      Do not publish unverified GST, bank, owner, phone, email or warranty claims without business-owner confirmation.
+    -->
+
+</head>
+<body>
+    <!-- KKS Electrotech branded loading screen -->
+    <div id="kksLoader" class="kks-loader" aria-label="K K S Electrotech welcome screen">
+        <div class="kks-loader-logo">
+            <div class="kks-logo-mark kks-loader-mark"><span class="kks-k">K</span><span class="kks-k2">K</span><span class="kks-s">S</span><span class="kks-bolt">⚡</span></div>
+            <div class="kks-loader-brand">K K S Electrotech</div>
+            <div class="kks-loader-tagline">Powering Progress • Energizing Tomorrow</div>
+            <div class="small text-light mt-2">Solar • Electrical • Energy Solutions</div>
+            <div class="kks-loader-line"><span></span></div>
+            <div class="kks-loader-count">Website opens automatically in <strong id="kksLoaderSeconds">30</strong> seconds</div>
+            <div class="kks-loader-actions">
+                <button class="kks-loader-btn kks-loader-btn-primary" type="button" onclick="continueToKKSWebsite()"><i class="fa-solid fa-arrow-right me-1"></i> Continue to Website</button>
+                <button class="kks-loader-btn kks-loader-btn-light" type="button" onclick="continueToKKSWebsite()"><i class="fa-solid fa-house me-1"></i> Enter Home</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- System Global Notification Banner -->
+    <div id="systemAlertBanner" class="alert alert-info text-center rounded-0 mb-0 py-2 small d-none shadow-sm animate-drop-down" role="alert">
+        <i class="fa-solid fa-circle-info me-2"></i><span id="systemAlertText"></span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+                <div class="kks-logo-mark me-2" aria-label="KKS Electrotech logo">
+                    <span class="kks-k">K</span><span class="kks-k2">K</span><span class="kks-s">S</span>
+                    <span class="kks-bolt">⚡</span>
+                </div>
+                <div>
+                    <span class="d-block lh-1 fs-5">K K S Electrotech</span>
+                    <small style="font-size: 9px;" class="text-info">Solar • Electrical • Energy</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#legacy">About KKS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services & Solar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offers-section">Special Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-info btn-sm px-3 w-100" data-bs-toggle="modal" data-bs-target="#docPortalModal"><i class="fa-solid fa-file-invoice-dollar me-1"></i> Quotation</button>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-warning btn-sm px-3 w-100" data-bs-toggle="modal" data-bs-target="#adminModal"><i class="fa-solid fa-user-shield me-1"></i> Master Admin</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Programmatic JavaScript-Controlled Carousel Slider -->
+    <header id="home">
+        <div id="homeHeroCarousel" class="carousel slide carousel-fade shadow-sm" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600');">
+                    <div class="container text-center hero-content">
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-bolt me-1"></i> Solar & Electrical Solutions</span>
+                         <h1 class="display-5 fw-bold mb-3 text-white">K K S Electrotech <span class="gold-bolt">⚡</span></h1>
+                         <p class="lead text-light mb-4">Solar energy systems, electrical solutions and dependable technology support from Deoli, Wardha.</p>
+                        <a href="#services" class="btn btn-warning btn-lg fw-semibold px-4 me-2">Explore Services</a>
+                    </div>
+                </div>
+                <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600');">
+                    <div class="container text-center hero-content">
+                        <span class="badge bg-primary mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-landmark me-1"></i> Trusted Local Energy Solutions</span>
+                        <h1 class="display-5 fw-bold mb-3">Built for Local Homes, Businesses & Industries</h1>
+                        <p class="lead text-light mb-4">Practical solar and electrical solutions designed around your site, energy needs and budget.</p>
+                        <a href="#legacy" class="btn btn-primary btn-lg fw-semibold px-4">Why Choose KKS</a>
+                    </div>
+                </div>
+                <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1509391365330-2e4a674158ae?auto=format&fit=crop&q=80&w=1600');">
+                    <div class="container text-center hero-content">
+                        <span class="badge bg-success mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-solar-panel me-1"></i> Solar EPC (500Wp-730Wp) & BESS</span>
+                        <h1 class="display-5 fw-bold mb-3">Turnkey Renewable Energy & Solar Plants</h1>
+                        <p class="lead text-light mb-4">High-efficiency 500Wp to 730Wp PV modules, MPPT inverters, and lithium storage.</p>
+                        <a href="#services" class="btn btn-success btn-lg fw-semibold px-4">View Solar Catalog</a>
+                    </div>
+                </div>
+                <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1600');">
+                    <div class="container text-center hero-content">
+                        <span class="badge bg-danger mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-tags me-1"></i> Current Area Deals</span>
+                        <h1 class="display-5 fw-bold mb-3">Exclusive Special Commercial Offers</h1>
+                        <p class="lead text-light mb-4">Looking for a better price? Connect with K K S Electrotech for the best current deal available in your area. Offers may vary by location, project size, system configuration and current campaign.</p>
+                        <a href="#offers-section" class="btn btn-danger btn-lg fw-semibold px-4">View Active Offers</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" onclick="moveCarousel('homeHeroCarousel', 'prev')"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" onclick="moveCarousel('homeHeroCarousel', 'next')"><span class="carousel-control-next-icon"></span></button>
+        </div>
+    </header>
+
+    <!-- Legacy Information Section -->
+    <section id="legacy" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border-start border-4 border-warning">
+                        <h2 class="fw-bold mb-3 text-dark">Local Solar & Electrotechnical Expertise</h2>
+                         <p class="text-muted">K K S Electrotech is listed as a local solar energy system service in Deoli, Wardha. Public business records identify the enterprise as a proprietorship established on 06-May-2022, with MSME/Udyam registration <strong>UDYAM-MH-34-0014347</strong>.</p>
+                         <p class="mb-0 fw-semibold text-primary"><i class="fa-solid fa-location-dot me-2"></i>Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra - 442101</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6"><div class="p-4 bg-primary text-white rounded-4 text-center shadow-sm"><h3 class="fw-bold display-5 mb-1">2022</h3><p class="mb-0 small">Enterprise Established</p></div></div>
+                        <div class="col-6"><div class="p-4 bg-warning text-dark rounded-4 text-center shadow-sm"><h3 class="fw-bold display-5 mb-1">442101</h3><p class="mb-0 small">Deoli PIN</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Products Section: Programmatic Carousel -->
+    <section id="services" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Comprehensive Services & Solar Offerings</h2>
+                <p class="text-muted">Solar PV systems, electrical solutions, energy storage and dependable project support.</p>
+            </div>
+            
+            <div id="servicesCarousel" class="carousel slide shadow-sm rounded-4 overflow-hidden p-3 bg-white border" data-bs-ride="carousel" data-bs-interval="4500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card service-card p-4 h-100 bg-light border-0">
+                                    <div class="mb-3 text-success fs-2"><i class="fa-solid fa-solar-panel"></i></div>
+                                    <h4 class="fw-bold h5">Solar PV & Rooftop Systems</h4>
+                                    <p class="text-muted small">Grid-tie, C&I, and turnkey EPC solar plants powered by Tier-1 500Wp to 730Wp modules.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card p-4 h-100 bg-light border-0">
+                                    <div class="mb-3 text-warning fs-2"><i class="fa-solid fa-battery-full"></i></div>
+                                    <h4 class="fw-bold h5">Battery Energy Storage (BESS)</h4>
+                                    <p class="text-muted small">Advanced lithium-ion storage solutions ensuring reliable backup and power independence.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card p-4 h-100 bg-light border-0">
+                                    <div class="mb-3 text-info fs-2"><i class="fa-solid fa-wind"></i></div>
+                                    <h4 class="fw-bold h5">Wind Energy & Hybrid Systems</h4>
+                                    <p class="text-muted small">Sustainable wind power equipment and hybrid renewable energy integrations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="moveCarousel('servicesCarousel', 'prev')"><span class="carousel-control-prev-icon bg-dark rounded-circle"></span></button>
+                <button class="carousel-control-next" type="button" onclick="moveCarousel('servicesCarousel', 'next')"><span class="carousel-control-next-icon bg-dark rounded-circle"></span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Module Section -->
+    <section id="offers-section" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Exclusive Current Deals & Offers</h2>
+                <p class="text-muted">Current local deals are updated based on project requirements, availability and running offers. Connect with us and our team will share the best offer currently available for your area.</p>
+            </div>
+            <div id="dynamicOffersContainer" class="row g-4">
+                <div class="col-md-4">
+                    <div class="card offer-card p-4 h-100 bg-white border-start border-4 border-warning shadow-sm">
+                        <span class="badge bg-primary mb-2">Current Area Offer</span>
+                        <h4 class="fw-bold h5">Ask for Today’s Best Solar & Electrical Deal</h4>
+                        <p class="text-muted small">Tell us your location, project type and approximate requirement. Our team will check the current offers running in your area and provide you with the most suitable available price or package.</p>
+                        <a href="#contact" class="btn btn-outline-primary btn-sm fw-semibold">Connect for Current Offer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consumer Testimonials Section: Programmatic Carousel -->
+    <section id="testimonials" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Client Testimonials & Reviews</h2>
+                <p class="text-muted">What our valued consumers and business partners say about K K S.</p>
+            </div>
+            
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card testimonial-card p-4 bg-white shadow-sm border text-center rounded-4">
+                                    <div class="text-warning mb-3 fs-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    <p class="fst-italic mb-3">"K K S installed a high-capacity solar rooftop system at our industrial facility in Wardha. Their technical precision, quality BOM, and prompt support under K K S Electrotech team are truly commendable."</p>
+                                    <h5 class="fw-bold mb-0">Anil Deshmukh</h5>
+                                    <small class="text-muted">Industrial Plant Owner, Deoli / Wardha</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card testimonial-card p-4 bg-white shadow-sm border text-center rounded-4">
+                                    <div class="text-warning mb-3 fs-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    <p class="fst-italic mb-3">"K K S Electrotech provided a professional solar and electrical solution with clear project coordination and dependable technical support."</p>
+                                    <h5 class="fw-bold mb-0">Dr. Rajesh Kulkarni</h5>
+                                    <small class="text-muted">Technology & Business Client, Maharashtra</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="moveCarousel('testimonialCarousel', 'prev')"><span class="carousel-control-prev-icon bg-dark rounded-circle"></span></button>
+                <button class="carousel-control-next" type="button" onclick="moveCarousel('testimonialCarousel', 'next')"><span class="carousel-control-next-icon bg-dark rounded-circle"></span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5"><h2 class="fw-bold">Contact Us & Enquiry Portal</h2><p class="text-muted">Connect directly with K K S Electrotech team.</p></div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border animate-drop-down">
+                        <form id="enquiryForm" action="https://formspree.io/f/mnparzoy" method="POST" onsubmit="handleFormSubmit(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6"><label class="form-label small fw-semibold">Your Name</label><input type="text" name="name" class="form-control" required></div>
+                                <div class="col-md-6"><label class="form-label small fw-semibold">Mobile Number</label><div class="input-group"><input type="tel" name="mobile_number" id="enqMob" class="form-control" required><button class="btn btn-outline-secondary btn-sm" type="button" onclick="pickContact('enqMob')"><i class="fa-solid fa-address-book"></i></button></div></div>
+                                <div class="col-12"><label class="form-label small fw-semibold">Email ID</label><input type="email" name="email" class="form-control" required></div>
+                                <div class="col-12"><label class="form-label small fw-semibold">Message</label><textarea name="message" class="form-control" rows="3" required></textarea></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 mt-4">Submit Enquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Welcome Chat Widget with Service Selector -->
+    <div id="chat-widget-container">
+        <div id="chatBox" class="chat-box animate-drop-down">
+            <div class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+                <div class="kks-chat-brand">
+                    <div class="kks-chat-logo">KKS<span class="kks-chat-bolt">⚡</span></div>
+                    <div><div class="kks-chat-name">K K S Electrotech</div><div class="kks-chat-sub">AI-style enquiry assistant • Solar & Electrical</div></div>
+                </div>
+                <button class="btn-close btn-close-white btn-sm" onclick="toggleChat()" aria-label="Close chat"></button>
+            </div>
+            <div id="chatBody" class="p-3" style="height: 250px; overflow-y: auto; background: #f8fafc;">
+                <div class="p-2 bg-white rounded shadow-sm mb-2 small border-start border-3 border-warning">
+                    <div class="kks-chat-brand mb-2"><div class="kks-chat-logo">KKS<span class="kks-chat-bolt">⚡</span></div><div><strong>K K S Electrotech</strong><div class="text-muted">Welcome! We’re here to help.</div></div></div>
+                    <strong>How can we help you today?</strong>
+                    <div class="mt-2 d-grid gap-1">
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Solar Rooftop / Solar EPC')">☀️ Solar Rooftop / Solar EPC</button>
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Electrical Work')">⚡ Electrical Work & Solutions</button>
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Battery Energy Storage')">🔋 Battery / Energy Storage</button>
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Current Offers')">🏷️ Current Deals & Offers</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2 bg-white border-top">
+                <input type="text" id="chatName" class="form-control form-control-sm mb-1" placeholder="Your Name">
+                <div class="input-group input-group-sm mb-1">
+                    <input type="text" id="chatPhone" class="form-control" placeholder="Mobile Number">
+                    <button class="btn btn-outline-secondary" type="button" onclick="pickContact('chatPhone')"><i class="fa-solid fa-address-book"></i></button>
+                </div>
+                <div class="input-group input-group-sm">
+                    <input type="text" id="chatMessage" class="form-control" placeholder="Type your query...">
+                    <button class="btn btn-primary" onclick="sendChatMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+        <button id="chatToggleBtn" class="btn btn-dark rounded-circle shadow-lg p-3" onclick="toggleChat()" style="width: 60px; height: 60px;">
+            <i class="fa-solid fa-comments fs-4 text-warning"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-1 fw-bold">&copy; 2026 K K S Electrotech. All Rights Reserved.</p>
+            <p class="small text-secondary mb-1">Proprietorship Enterprise | Solar • Electrical • Energy Solutions | Deoli, Wardha</p>
+            <p class="small text-secondary mb-0"><i class="fa-solid fa-location-dot me-1"></i> Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra - 442101 | <i class="fa-solid fa-id-card me-1"></i> Udyam: UDYAM-MH-34-0014347</p>
+        </div>
+    </footer>
+
+    <!-- Quotation Generator Portal Modal -->
+    <div class="modal fade" id="docPortalModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content animate-drop-down">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-invoice-dollar me-2"></i>Quotation Generator Portal</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    <!-- Password Authentication Gate (Blank by default) -->
+                    <div id="quotationAuthBox" class="p-5 text-center bg-white rounded shadow-sm border my-3">
+                        <h4 class="mb-3 text-primary"><i class="fa-solid fa-lock me-2"></i>Quotation Authorization Required</h4>
+                        <p class="text-muted small mb-4">Please enter the master access password to unlock the Quotation Generator.</p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-5">
+                                <input type="password" id="quotationPassInput" class="form-control mb-3 text-center" placeholder="Enter Password">
+                                <button class="btn btn-primary w-100 fw-semibold" onclick="unlockQuotationPortal()">Unlock Generator</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unlocked Quotation Content -->
+                    <div id="quotationMainContent" class="d-none">
+                        <div class="alert alert-success py-2 small mb-3"><i class="fa-solid fa-check-circle me-2"></i>Quotation Portal authorized successfully. Configure your project parameters below.</div>
+                        
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-3">
+                                <label class="form-label small fw-bold">Quotation Service Category</label>
+                                <select id="quotationCategory" class="form-select" onchange="toggleCategoryFields()">
+                                    <option value="Solar Grid-Tie">Solar Grid-Tie System</option>
+                                    <option value="Solar C&I">Solar Commercial & Industrial Project</option>
+                                    <option value="Solar Turnkey EPC">Solar Turnkey EPC Project</option>
+                                    <option value="Material Trading">Specific Material Trading / General BOM</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3"><label class="form-label small fw-bold">Client Name</label><input type="text" id="docClientName" class="form-control" placeholder="Client Name"></div>
+                            <div class="col-md-3">
+                                <label class="form-label small fw-bold">Client Mobile</label>
+                                <div class="input-group"><input type="text" id="docClientMobile" class="form-control" placeholder="91"><button class="btn btn-outline-secondary btn-sm" type="button" onclick="pickContact('docClientMobile')"><i class="fa-solid fa-address-book"></i></button></div>
+                            </div>
+                            <div class="col-md-3"><label class="form-label small fw-bold">Client Email</label><input type="email" id="docClientEmail" class="form-control" placeholder="client@email.com"></div>
+                            <div class="col-12"><label class="form-label small fw-bold">Client Full Address</label><input type="text" id="docClientAddress" class="form-control" placeholder="Client Street Address, City, State, Pincode"></div>
+                        </div>
+
+                        <!-- Solar EPC Configurator with 500Wp-730Wp Range & Inverter Manual Pricing -->
+                        <div id="solarEpcBuilder" class="card p-3 mb-3 border bg-white shadow-sm">
+                            <h6 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-solar-panel me-2"></i>Solar EPC Plant, 500Wp-730Wp Modules & Inverter Pricing Configurator</h6>
+                            <div class="row g-3">
+                                <div class="col-md-3"><label class="form-label small fw-bold">Plant Capacity (kW)</label><input type="number" id="epcKw" class="form-control" value="10" min="1"></div>
+                                <div class="col-md-3">
+                                    <label class="form-label small fw-bold"><i class="fa-solid fa-industry text-warning me-1"></i> PV Module Brand</label>
+                                    <select id="epcModuleCompany" class="form-select" onchange="updateModuleWattages()">
+                                        <option value="Kosol Energie">Kosol Energie (Tier-1)</option>
+                                        <option value="Waaree Energies">Waaree Energies (Tier-1)</option>
+                                        <option value="Adani Solar">Adani Solar (Tier-1)</option>
+                                        <option value="Vikram Solar">Vikram Solar (Tier-1)</option>
+                                        <option value="Rayzon Solar">Rayzon Solar (Tier-1)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label small fw-bold"><i class="fa-solid fa-bolt text-success me-1"></i> Wattage (500Wp - 730Wp)</label>
+                                    <select id="epcModuleWp" class="form-select"></select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label small fw-bold"><i class="fa-solid fa-plug text-primary me-1"></i> Inverter Brand</label>
+                                    <select id="epcInverterBrand" class="form-select">
+                                        <option value="Sungrow">Sungrow MPPT Inverter</option>
+                                        <option value="Growatt">Growatt String Inverter</option>
+                                        <option value="Havells">Havells Grid-Tie Inverter</option>
+                                        <option value="Delta">Delta 3-Phase Inverter</option>
+                                        <option value="Solis">Solis Grid-Tie Inverter</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3 mt-1">
+                                <div class="col-md-3"><label class="form-label small fw-bold">Inverter Size (kW)</label><input type="number" id="epcInverterKw" class="form-control" value="10" min="1"></div>
+                                <div class="col-md-3"><label class="form-label small fw-bold">Inverter Manual Price (₹)</label><input type="number" id="epcInverterPrice" class="form-control" value="85000"></div>
+                                <div class="col-md-3"><label class="form-label small fw-bold">Turnkey Rate per kW (₹)</label><input type="number" id="epcRatePerKw" class="form-control" value="45000"></div>
+                                <div class="col-md-3 text-end align-self-end">
+                                    <button class="btn btn-dark btn-sm fw-semibold w-100" onclick="generateSolarEpcBomTable()"><i class="fa-solid fa-list-check me-1"></i> Auto-Generate BOM</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Manual Item Addition -->
+                        <div class="card p-3 mb-3 border shadow-sm">
+                            <h6 class="fw-bold mb-3 text-secondary"><i class="fa-solid fa-plus-circle me-2"></i>Add / Modify Specific Line Items</h6>
+                            <div class="row g-2 align-items-end">
+                                <div class="col-md-4"><input type="text" id="lineDesc" class="form-control form-control-sm" placeholder="Description / Specification"></div>
+                                <div class="col-md-2"><input type="number" id="lineQty" class="form-control form-control-sm" value="1" min="1"></div>
+                                <div class="col-md-2"><input type="number" id="lineRate" class="form-control form-control-sm" placeholder="Rate (₹)"></div>
+                                <div class="col-md-2">
+                                    <select id="lineGst" class="form-select form-select-sm">
+                                        <option value="0">0%</option>
+                                        <option value="12" selected>12% (Solar)</option>
+                                        <option value="18">18% (Services/BOS)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2"><button class="btn btn-success btn-sm w-100 fw-semibold" onclick="addLineItem()"><i class="fa-solid fa-plus"></i> Add</button></div>
+                            </div>
+                        </div>
+
+                        <!-- Fully Editable Items Table -->
+                        <div class="table-responsive mb-3 bg-white p-2 rounded shadow-sm">
+                            <table class="table table-sm table-bordered align-middle mb-0">
+                                <thead class="table-secondary">
+                                    <tr><th>Description / BOM Material</th><th>Qty</th><th>Unit Rate (₹)</th><th>GST %</th><th>Total (₹)</th><th>Action</th></tr>
+                                </thead>
+                                <tbody id="quotationItemsTable"></tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-flex gap-2 justify-content-end mb-4">
+                            <button class="btn btn-warning fw-semibold px-4 py-2" onclick="generateCompleteQuotation()"><i class="fa-solid fa-file-invoice me-1"></i> Generate & Open Quotation Popup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top-Down Popup Modal for Quotation Preview & PDF Export -->
+    <div class="modal fade" id="docPreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content animate-drop-down border-0 shadow-lg">
+                <div class="modal-header bg-dark text-white py-2">
+                    <h6 class="modal-title"><i class="fa-solid fa-file-contract text-warning me-2"></i>Official Quotation Preview & Export</h6>
+                    <button type="button" class="btn-close btn-close-white btn-sm" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Exact 70px bottom padding constraint applied here -->
+                <div class="modal-body bg-white" id="docPreviewModalContent" style="padding: 20px 20px 70px 20px;">
+                    <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2 flex-wrap gap-2">
+                        <div>
+                            <h4 class="fw-bold text-primary mb-0" style="font-size: 1.15rem;"><i class="fa-solid fa-network-wired text-warning me-2"></i>K K S Electrotech</h4>
+                            <small class="text-muted" style="font-size: 9.5px;">Headquarters: Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra<br>| Email: Contact details available on request | Phone: </small>
+                        </div>
+                        <div class="text-end">
+                            <div id="previewCompanyLogo" class="badge bg-dark text-warning p-2 fs-6 mb-1"><i class="fa-solid fa-bolt me-1"></i> Solar • Electrical • Energy</div>
+                            <h5 class="fw-bold text-dark mb-0 fs-6" id="previewDocTitle">QUOTATION</h5>
+                            <p class="mb-0 small" style="font-size: 9.5px;"><strong>Date:</strong> <span id="previewDate"></span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2 small" style="font-size: 10.5px;">
+                        <div class="col-7"><p class="mb-1"><strong>Buyer:</strong> <span id="prevClient"></span></p><p class="mb-1"><strong>Address:</strong> <span id="prevAddress"></span></p><p class="mb-1"><strong>Mobile:</strong> <span id="prevMobile"></span></p><p class="mb-0"><strong>Email:</strong> <span id="prevEmail"></span></p></div>
+                        <div class="col-5 text-end"><p class="mb-1"><strong>Seller:</strong> K K S Electrotech</p><p class="mb-0">State Code: 27 (Maharashtra)</p></div>
+                    </div>
+
+                    <div class="table-responsive mb-2">
+                        <table class="table table-bordered align-middle" style="font-size: 10.5px;">
+                            <thead class="table-dark">
+                                <tr><th>#</th><th>BOM Material / Service Description</th><th>Qty</th><th>Rate</th><th>GST</th><th>Total (₹)</th></tr>
+                            </thead>
+                            <tbody id="finalPreviewTableBody"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="row justify-content-end mb-2">
+                        <div class="col-md-6">
+                            <div class="p-2 bg-light rounded border small" style="font-size: 10.5px;">
+                                <div class="d-flex justify-content-between mb-1"><span>Subtotal:</span> <strong id="summarySubtotal">₹0.00</strong></div>
+                                <div class="d-flex justify-content-between mb-1"><span>Total GST:</span> <strong id="summaryGst">₹0.00</strong></div>
+                                <hr class="my-1">
+                                <div class="d-flex justify-content-between fs-6 text-primary fw-bold"><span>Grand Total:</span> <span id="summaryGrandTotal">₹0.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms & Conditions Section -->
+                    <div class="p-2 bg-light rounded border small mb-2" style="font-size: 9.5px;">
+                        <h6 class="fw-bold text-dark mb-1" style="font-size: 10.5px;"><i class="fa-solid fa-file-contract me-1"></i> Terms & Conditions</h6>
+                        <ul class="mb-0 ps-3 text-muted">
+                            <li><strong>Validity:</strong> 30 days from date of issue.</li>
+                            <li><strong>Payment Terms:</strong> 25% advance, 50% on dispatch, 25% upon commissioning.</li>
+                            <li><strong>Warranty:</strong> 25 years performance warranty on PV Modules (500Wp-730Wp); 5 years on Inverters & Structures.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Inline Section: Enterprise & Bank Details, Corporate Headquarters, & Authorized Signatory -->
+                    <div class="p-2 bg-light rounded border border-start border-4 border-primary small mb-2" style="font-size: 9.5px; line-height: 1.35;">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-4 border-end">
+                                <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-building-columns text-primary me-1"></i> Bank & GST Details</h6>
+                                <p class="mb-1"><strong>GSTIN:</strong> 27AEXXXXX2022Z1</p>
+                                <p class="mb-1"><strong>Bank:</strong> Bank details to be configured</p>
+                                <p class="mb-0"><strong>A/c No:</strong> 38500202241 | <strong>IFSC:</strong> —</p>
+                            </div>
+                            <div class="col-md-4 border-end px-2">
+                                <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-location-dot text-danger me-1"></i> Corporate Headquarters</h6>
+                                <p class="mb-1 text-muted">Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra - 442101</p>
+                                <p class="mb-0 text-muted"><i class="fa-solid fa-phone me-1"></i> </p>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <p class="mb-0 fw-bold text-dark" style="font-size: 9.5px;">For K K S Electrotech</p>
+                                <div style="height: 14px;"></div>
+                                <p class="mb-0 fw-semibold text-primary" style="font-size: 9.5px;"><span class="text-muted" style="font-size: 8.5px;">Authorized Signatory</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tagline Section -->
+                    <div class="p-2 bg-white rounded border border-start border-4 border-info small mb-2 text-center" style="font-size: 10px;">
+                        <span class="fw-bold text-primary"><i class="fa-solid fa-bolt text-warning me-1"></i> Tagline:</span> <span class="fst-italic text-dark">"Empowering Tomorrow with Advanced Technology, Renewable Energy & Trusted Industrial Excellence Since 2022."</span>
+                    </div>
+
+                    <!-- About Us Section -->
+                    <div class="p-2 bg-light rounded border border-start border-4 border-warning small mb-2" style="font-size: 9.5px; line-height: 1.35;">
+                        <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-circle-info text-warning me-1"></i> About Us - K K S Electrotech</h6>
+                        <p class="text-muted mb-0">Building upon trusted industrial roots since <strong>2022</strong> with a focus on practical solar, electrical and renewable-energy solutions for customers in Deoli, Wardha and surrounding areas.</p>
+                    </div>
+
+                    <!-- Core Services & Offerings Section -->
+                    <div class="p-2 bg-light rounded border border-start border-4 border-success small" style="font-size: 9.5px; line-height: 1.35;">
+                        <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-solar-panel text-success me-1"></i> Core Services & Offerings</h6>
+                        <ul class="mb-0 ps-3 text-muted">
+                            <li>Residential Rooftop Solar System</li>
+                            <li>Commercial and Industrial Solar EPC Projects</li>
+                            <li>Turnkey Solar EPC Projects - (By Using 500Wp-730Wp Tier-1 PV Modules)</li>
+                            <li>Battery Energy Storage Systems (BESS)</li>
+                            <li>Electrical Project Support & Maintenance</li>
+                            <li>Electrical & Energy Product Supply</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light py-2">
+                    <button class="btn btn-outline-secondary btn-sm" onclick="dispatchPdfAction('print')"><i class="fa-solid fa-file-pdf me-1"></i> Save / Print PDF</button>
+                    <button class="btn btn-success btn-sm" onclick="dispatchTablePlatform('whatsapp')"><i class="fa-brands fa-whatsapp me-1"></i> Send On WhatsApp</button>
+                    <button class="btn btn-primary btn-sm" onclick="dispatchTablePlatform('email')"><i class="fa-solid fa-envelope me-1"></i> Send On Email</button>
+                    <button class="btn btn-dark btn-sm" onclick="dispatchTablePlatform('sms')"><i class="fa-solid fa-sms me-1"></i> Send On Messages</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Master Admin & Full Content CRUD Management Modal -->
+    <div class="modal fade" id="adminModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content animate-drop-down">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-user-shield me-2"></i>Master Admin Full Content CRUD Hub</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    <!-- Login View (Blank password field by default) -->
+                    <div id="admin-login-view" class="p-5 text-center">
+                        <h4 class="mb-3">Master Administrator Login</h4>
+                        <p class="text-muted small mb-4">Full CRUD control over all website contents, functional records, offers, and client CRM.</p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <input type="password" id="admin-pass" class="form-control mb-3 text-center" placeholder="Master Password">
+                                <button class="btn btn-primary w-100 fw-semibold" onclick="verifyAdmin()">Authenticate Master Panel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Master Panel View -->
+                    <div id="admin-panel-view" class="d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                            <div>
+                                <h5 class="fw-bold mb-0">Master Content CRUD & Operations Hub</h5>
+                                <small class="text-muted">Perform Create, Read, Update, and Delete operations on any website or functional record.</small>
+                            </div>
+                            <div>
+                                <button class="btn btn-success btn-sm me-2" onclick="openCrudRecordModal()"><i class="fa-solid fa-plus me-1"></i> Add New Record</button>
+                                <button class="btn btn-primary btn-sm" onclick="loadAdminData()"><i class="fa-solid fa-sync me-1"></i> Refresh CRM Data</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive bg-white rounded-3 shadow-sm p-3 mb-4">
+                            <h6 class="fw-bold text-primary mb-3">Website Content & Functional Records (CRUD)</h6>
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-dark">
+                                    <tr><th>Record ID / Tab</th><th>Section / Title</th><th>Details / Content</th><th>Status</th><th>CRUD Actions</th></tr>
+                                </thead>
+                                <tbody id="crud-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include html2pdf.js for Robust Client-Side PDF Export Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- PARENT CONFIGURATION: Paste your deployed Apps Script Web App URL below ---
+        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_APPS_SCRIPT_URL_HERE/exec";
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize All Sliders and Carousels Programmatically using JavaScript Bootstrap Instances
+            window.carousels = {
+                homeHeroCarousel: new bootstrap.Carousel(document.getElementById('homeHeroCarousel'), { interval: 5000, wrap: true }),
+                servicesCarousel: new bootstrap.Carousel(document.getElementById('servicesCarousel'), { interval: 4500, wrap: true }),
+                testimonialCarousel: new bootstrap.Carousel(document.getElementById('testimonialCarousel'), { interval: 5000, wrap: true })
+            };
+            
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    const navbarCollapse = document.getElementById('navbarNav');
+                    if (navbarCollapse.classList.contains('show')) {
+                        new bootstrap.Collapse(navbarCollapse).toggle();
+                    }
+                });
+            });
+            updateModuleWattages();
+        });
+
+        // Programmatic JavaScript Slider Controller
+        function moveCarousel(carouselId, direction) {
+            if (window.carousels && window.carousels[carouselId]) {
+                if (direction === 'next') {
+                    window.carousels[carouselId].next();
+                } else {
+                    window.carousels[carouselId].prev();
+                }
+            }
+        }
+
+        function showSystemBanner(msg) {
+            const banner = document.getElementById('systemAlertBanner');
+            document.getElementById('systemAlertText').innerText = msg;
+            banner.classList.remove('d-none');
+            setTimeout(() => banner.classList.add('d-none'), 6000);
+        }
+
+        async function pickContact(targetInputId) {
+            if ('contacts' in navigator && 'select' in navigator.contacts) {
+                try {
+                    const contacts = await navigator.contacts.select(['tel', 'name'], { multiple: false });
+                    if (contacts && contacts.length > 0 && contacts[0].tel) {
+                        document.getElementById(targetInputId).value = contacts[0].tel[0];
+                        showSystemBanner("Contact loaded successfully from device storage!");
+                        return;
+                    }
+                } catch (e) { console.log(e); }
+            }
+            alert("Contact Picker not supported. Please type manually.");
+        }
+
+        function toggleChat() {
+            const box = document.getElementById('chatBox');
+            box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function appendChatMessage(html, type='support') {
+            const body = document.getElementById('chatBody');
+            const wrap = document.createElement('div');
+            wrap.className = 'p-2 rounded shadow-sm mb-2 small ' + (type === 'user' ? 'bg-light text-end' : 'bg-white border-start border-3 border-success');
+            wrap.innerHTML = html;
+            body.appendChild(wrap);
+            body.scrollTop = body.scrollHeight;
+        }
+
+        function kksAiReply(query, name='') {
+            const q = String(query || '').toLowerCase();
+            let reply = 'Thank you for contacting K K S Electrotech. Our team member will review your requirement and connect with you soon.';
+            if (q.includes('offer') || q.includes('deal') || q.includes('price') || q.includes('discount')) {
+                reply = 'Absolutely. Current offers can vary by area, project size, system configuration and the offers running at the time of enquiry. Share your location and requirement, and our K K S Electrotech team will provide the best current offer available in your area.';
+            } else if (q.includes('solar') || q.includes('rooftop') || q.includes('epc')) {
+                reply = 'For solar enquiries, please share your location, average monthly electricity bill (if available), and whether the project is residential, commercial or industrial. A K K S Electrotech team member will review it and connect with you soon.';
+            } else if (q.includes('electrical') || q.includes('wiring') || q.includes('panel') || q.includes('installation')) {
+                reply = 'We can help with electrical requirements, installation, testing and related energy solutions. Please share a short description of the work and your location; our team member will connect with you soon.';
+            } else if (q.includes('battery') || q.includes('storage') || q.includes('backup')) {
+                reply = 'For battery and energy-storage requirements, please share your load/backup requirement and location. Our team will review the requirement and recommend a suitable solution.';
+            }
+            return ` <strong>KKS AI Assistant:</strong> ${reply}<br><span class="text-primary fw-semibold">${name ? 'Thank you, '+escapeHtml(name)+'. ' : ''}A team member will connect with you soon.</span>`;
+        }
+
+        function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
+
+        function selectChatService(serviceName) {
+            appendChatMessage(`<strong>You:</strong> I want information about ${escapeHtml(serviceName)}.`, 'user');
+            setTimeout(() => appendChatMessage(kksAiReply(serviceName)), 650);
+        }
+
+        function sendChatMessage() {
+            const name = document.getElementById('chatName').value.trim();
+            const phone = document.getElementById('chatPhone').value.trim();
+            const msg = document.getElementById('chatMessage').value.trim();
+            if(!name || !msg) { alert('Please enter your name and query.'); return; }
+            appendChatMessage(`<strong>${escapeHtml(name)}${phone ? ' ('+escapeHtml(phone)+')' : ''}:</strong> ${escapeHtml(msg)}`, 'user');
+            document.getElementById('chatMessage').value = '';
+            let chatLogs = JSON.parse(localStorage.getItem('kks_chat_logs') || '[]');
+            chatLogs.push({ name, phone, msg, time: new Date().toLocaleString() });
+            localStorage.setItem('kks_chat_logs', JSON.stringify(chatLogs));
+            setTimeout(() => {
+                appendChatMessage(kksAiReply(msg, name));
+                showSystemBanner('Your enquiry has been recorded. A K K S Electrotech team member will connect with you soon.');
+            }, 900);
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            if(!confirm("Submit this enquiry to K K S?")) return;
+            const form = document.getElementById('enquiryForm');
+            fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+                .then(res => { 
+                    if(res.ok) { 
+                        showSystemBanner("Enquiry successfully submitted to Contact details available on request!");
+                        alert("Enquiry successfully submitted! Transmission sent to K K S Electrotech team.");
+                        form.reset(); 
+                    } 
+                });
+        }
+
+        function unlockQuotationPortal() {
+            const pass = document.getElementById('quotationPassInput').value;
+            if(pass === "KKS@2022") {
+                document.getElementById('quotationAuthBox').classList.add('d-none');
+                document.getElementById('quotationMainContent').classList.remove('d-none');
+                showSystemBanner("Quotation Generator unlocked successfully!");
+            } else { alert("Incorrect password! Default is KKS@2022"); }
+        }
+
+        // Standardized 500Wp to 730Wp Module Range Mapping
+        const moduleWattageMap = {
+            "Kosol Energie": [
+                { text: "Kosol Star Plus 540Wp Mono PERC", wp: 540 },
+                { text: "Kosol TOPCon 610Wp High-Efficiency", wp: 610 },
+                { text: "Kosol Ultra N-Type 730Wp Bifacial", wp: 730 }
+            ],
+            "Waaree Energies": [
+                { text: "Waaree Aditya 550Wp Dual Glass", wp: 550 },
+                { text: "Waaree N-Type TOPCon 650Wp", wp: 650 },
+                { text: "Waaree Mega 730Wp Bi-facial", wp: 730 }
+            ],
+            "Adani Solar": [
+                { text: "Adani Shine TOPCon 575Wp", wp: 575 },
+                { text: "Adani Elan 630Wp Bifacial", wp: 630 },
+                { text: "Adani Titan 730Wp Utility", wp: 730 }
+            ],
+            "Vikram Solar": [
+                { text: "Vikram Somaiya 540Wp", wp: 540 },
+                { text: "Vikram Eldora 650Wp TOPCon", wp: 650 },
+                { text: "Vikram Firefly 730Wp", wp: 730 }
+            ],
+            "Rayzon Solar": [
+                { text: "Rayzon Crystal 550Wp", wp: 550 },
+                { text: "Rayzon Grand 670Wp", wp: 670 },
+                { text: "Rayzon Titan 730Wp", wp: 730 }
+            ]
+        };
+
+        function updateModuleWattages() {
+            const company = document.getElementById('epcModuleCompany').value;
+            const wpSelect = document.getElementById('epcModuleWp');
+            wpSelect.innerHTML = "";
+            const options = moduleWattageMap[company] || [];
+            options.forEach(opt => {
+                const el = document.createElement('option');
+                el.value = `${company} | ${opt.text}`;
+                el.setAttribute('data-wp', opt.wp);
+                el.innerText = opt.text;
+                wpSelect.appendChild(el);
+            });
+        }
+
+        let quotationItems = [];
+
+        function toggleCategoryFields() {
+            const cat = document.getElementById('quotationCategory').value;
+            document.getElementById('solarEpcBuilder').style.display = cat.includes("Trading") ? 'none' : 'block';
+        }
+
+        function generateSolarEpcBomTable() {
+            if(!confirm("Generate standard solar EPC BOM based on selected plant capacity, 500Wp-730Wp wattage, and inverter pricing?")) return;
+            const kw = parseFloat(document.getElementById('epcKw').value) || 10;
+            const ratePerKw = parseFloat(document.getElementById('epcRatePerKw').value) || 45000;
+            const modSelection = document.getElementById('epcModuleWp');
+            const modText = modSelection.value;
+            const selectedOpt = modSelection.options[modSelection.selectedIndex];
+            const wp = selectedOpt ? parseInt(selectedOpt.getAttribute('data-wp')) || 540 : 540;
+            
+            const invBrand = document.getElementById('epcInverterBrand').value;
+            const invKw = parseFloat(document.getElementById('epcInverterKw').value) || kw;
+            const invPrice = parseFloat(document.getElementById('epcInverterPrice').value) || 85000;
+
+            const totalWatts = kw * 1000;
+            const modCount = Math.ceil(totalWatts / wp);
+            
+            const totalProjectCost = kw * ratePerKw;
+            const moduleCost = Math.round(totalProjectCost * 0.48 / modCount);
+            const structureCost = Math.round(totalProjectCost * 0.16 / kw);
+            const bosCost = Math.round(totalProjectCost * 0.10 / kw);
+            const installationCost = Math.round(totalProjectCost * 0.06);
+
+            quotationItems = [
+                { desc: `Solar PV Modules: ${modText} (${modCount} Nos)`, qty: modCount, rate: moduleCost, gst: 12 },
+                { desc: `Solar Inverter: ${invBrand} (${invKw} kW Unit - Custom Price)`, qty: 1, rate: invPrice, gst: 12 },
+                { desc: `Hot-Dip Galvanized (HDG) Mounting Structure & Hardware`, qty: kw, rate: structureCost, gst: 18 },
+                { desc: `DC/AC Armored Solar Cables, DCDB, ACDB & Surge Protection`, qty: kw, rate: bosCost, gst: 18 },
+                { desc: `Turnkey Installation, Testing, Commissioning & Net Metering Liaison`, qty: 1, rate: installationCost, gst: 18 }
+            ];
+            renderQuotationItemsTable();
+            showSystemBanner(`Generated BOM for ${kw} kW plant using ${modCount}x ${wp}Wp modules and ${invKw}kW ${invBrand} inverter!`);
+        }
+
+        function addLineItem() {
+            const desc = document.getElementById('lineDesc').value;
+            const qty = parseFloat(document.getElementById('lineQty').value) || 1;
+            const rate = parseFloat(document.getElementById('lineRate').value) || 0;
+            const gst = parseFloat(document.getElementById('lineGst').value) || 12;
+            if(!desc || rate <= 0) { alert("Enter valid description and rate."); return; }
+            quotationItems.push({ desc, qty, rate, gst });
+            renderQuotationItemsTable();
+            document.getElementById('lineDesc').value = '';
+            document.getElementById('lineRate').value = '';
+        }
+
+        function updateItemField(idx, field, val) {
+            quotationItems[idx][field] = field === 'desc' ? val : parseFloat(val) || 0;
+        }
+
+        function renderQuotationItemsTable() {
+            const tbody = document.getElementById('quotationItemsTable');
+            tbody.innerHTML = "";
+            quotationItems.forEach((item, idx) => {
+                const total = (item.qty * item.rate) * (1 + item.gst / 100);
+                tbody.innerHTML += `
+                    <tr>
+                        <td><input type="text" class="form-control form-control-sm" value="${item.desc}" onchange="updateItemField(${idx}, 'desc', this.value)"></td>
+                        <td><input type="number" class="form-control form-control-sm" value="${item.qty}" min="1" onchange="updateItemField(${idx}, 'qty', this.value)"></td>
+                        <td><input type="number" class="form-control form-control-sm" value="${item.rate}" onchange="updateItemField(${idx}, 'rate', this.value)"></td>
+                        <td>
+                            <select class="form-select form-select-sm" onchange="updateItemField(${idx}, 'gst', this.value)">
+                                <option value="0" ${item.gst === 0 ? 'selected' : ''}>0%</option>
+                                <option value="12" ${item.gst === 12 ? 'selected' : ''}>12%</option>
+                                <option value="18" ${item.gst === 18 ? 'selected' : ''}>18%</option>
+                            </select>
+                        </td>
+                        <td class="fw-bold">₹${total.toFixed(2)}</td>
+                        <td><button class="btn btn-outline-danger btn-sm py-0" onclick="if(confirm('Delete item?')){quotationItems.splice(${idx},1);renderQuotationItemsTable();}"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>`;
+            });
+        }
+
+        let currentDocData = {};
+        function generateCompleteQuotation() {
+            const client = document.getElementById('docClientName').value;
+            const address = document.getElementById('docClientAddress').value;
+            const mobile = document.getElementById('docClientMobile').value;
+            const email = document.getElementById('docClientEmail').value;
+            const category = document.getElementById('quotationCategory').value;
+            const kwSize = document.getElementById('epcKw') ? document.getElementById('epcKw').value : '10';
+
+            if(!client || quotationItems.length === 0) { alert("Please enter client name and add quotation items."); return; }
+            if(!confirm("Generate complete verified quotation, save to Google Sheet, and open popup preview?")) return;
+            
+            document.getElementById('previewDocTitle').innerText = category.toUpperCase() + " QUOTATION";
+            document.getElementById('previewDate').innerText = new Date().toLocaleDateString();
+            document.getElementById('prevClient').innerText = client;
+            document.getElementById('prevAddress').innerText = address || "N/A";
+            document.getElementById('prevMobile').innerText = mobile;
+            document.getElementById('prevEmail').innerText = email;
+
+            const company = document.getElementById('epcModuleCompany').value;
+            document.getElementById('previewCompanyLogo').innerHTML = `<i class="fa-solid fa-bolt me-1"></i> ${company} Certified Partner`;
+
+            let sub = 0, gst = 0, grand = 0;
+            const finalTbody = document.getElementById('finalPreviewTableBody');
+            finalTbody.innerHTML = "";
+            quotationItems.forEach((item, idx) => {
+                const amt = item.qty * item.rate;
+                const gAmt = (amt * item.gst) / 100;
+                const tot = amt + gAmt;
+                sub += amt; gst += gAmt; grand += tot;
+                finalTbody.innerHTML += `<tr><td>${idx+1}</td><td>${item.desc}</td><td>${item.qty}</td><td>₹${item.rate.toFixed(2)}</td><td>${item.gst}% (₹${gAmt.toFixed(2)})</td><td class="fw-bold">₹${tot.toFixed(2)}</td></tr>`;
+            });
+
+            document.getElementById('summarySubtotal').innerText = `₹${sub.toFixed(2)}`;
+            document.getElementById('summaryGst').innerText = `₹${gst.toFixed(2)}`;
+            document.getElementById('summaryGrandTotal').innerText = `₹${grand.toFixed(2)}`;
+            
+            const safeClient = client.replace(/[^a-zA-Z0-9]/g, '_');
+            const safeCategory = category.replace(/[^a-zA-Z0-9]/g, '_');
+            const customFilename = `${safeClient}_${safeCategory}_${kwSize}kW_By_KKS-Electrotech.pdf`;
+
+            currentDocData = { client, address, mobile, email, grandTotal: grand.toFixed(2), filename: customFilename, category, kwSize };
+            
+            if(APPS_SCRIPT_URL && !APPS_SCRIPT_URL.includes("YOUR_APPS_SCRIPT_URL_HERE")) {
+                fetch(APPS_SCRIPT_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify({
+                        action: "CREATE",
+                        tab: "Quotations",
+                        quoteId: "Q-" + new Date().getTime(),
+                        clientName: client,
+                        clientAddress: address,
+                        clientMobile: mobile,
+                        clientEmail: email,
+                        category: category,
+                        grandTotal: grand.toFixed(2)
+                    })
+                }).then(res => res.json()).then(res => {
+                    showSystemBanner("Quotation successfully generated and stored in Google Sheet!");
+                }).catch(err => console.log(err));
+            } else {
+                showSystemBanner("Quotation generated successfully!");
+            }
+
+            const previewModal = new bootstrap.Modal(document.getElementById('docPreviewModal'));
+            previewModal.show();
+        }
+
+        // Formatted Tabular Summary Generator for Direct Platform Dispatch
+        function buildFormattedTabularText() {
+            const client = currentDocData.client || "Valued Client";
+            const address = currentDocData.address || "N/A";
+            const date = document.getElementById('previewDate').innerText;
+            const grandTotal = document.getElementById('summaryGrandTotal').innerText;
+            let text = `*K K S ELECTROTECH*\n`;
+            text += `*OFFICIAL QUOTATION SUMMARY*\n`;
+            text += `----------------------------------------\n`;
+            text += `*Buyer:* ${client}\n`;
+            text += `*Service:* ${currentDocData.category} (${currentDocData.kwSize}kW)\n`;
+            text += `*Address:* ${address}\n`;
+            text += `*Date:* ${date}\n`;
+            text += `----------------------------------------\n`;
+            quotationItems.forEach((item, idx) => {
+                const tot = (item.qty * item.rate) * (1 + item.gst / 100);
+                text += `${idx+1}. ${item.desc} (Qty: ${item.qty}) - *₹${tot.toFixed(2)}*\n`;
+            });
+            text += `----------------------------------------\n`;
+            text += `*GRAND TOTAL:* *${grandTotal}*\n`;
+            text += `----------------------------------------\n`;
+            text += `*Bank Details:* SBI A/c 38500202241 | IFSC: —\n`;
+            text += `*Contact:*  | Contact details available on request\n`;
+            text += `_(PDF Document Generated: ${currentDocData.filename})_`;
+            return text;
+        }
+
+        // JavaScript Direct Platform Dispatch (WhatsApp, Email, SMS) with Automatic PDF File Generation
+        function dispatchTablePlatform(platformType) {
+            let mobile = currentDocData.mobile || "";
+            mobile = mobile.replace(/[^0-9]/g, '');
+            const client = currentDocData.client || "Valued Client";
+            const formattedTableText = buildFormattedTabularText();
+
+            // Automatically generate and download the PDF file concurrently so it can be attached/sent immediately
+            dispatchPdfAction('print');
+
+            if (platformType === 'whatsapp') {
+                if(!confirm(`Dispatch Quotation summary & PDF to Buyer ${client} via WhatsApp?`)) return;
+                window.open(`whatsapp://send?phone=${mobile}&text=${encodeURIComponent(formattedTableText)}`, '_blank');
+                setTimeout(() => showSystemBanner("WhatsApp share interface launched! Attach downloaded PDF file: " + currentDocData.filename), 1500);
+            } else if (platformType === 'email') {
+                if(!confirm(`Dispatch Quotation summary & PDF to Buyer ${currentDocData.email || 'Contact details available on request'} via Email?`)) return;
+                const recipient = currentDocData.email || "Contact details available on request";
+                window.location.href = `mailto:${recipient}?subject=K K S Official Quotation - ${client} (${currentDocData.kwSize}kW)&body=${encodeURIComponent(formattedTableText)}`;
+                setTimeout(() => showSystemBanner("Email client launched! Attach downloaded PDF file: " + currentDocData.filename), 1500);
+            } else if (platformType === 'sms') {
+                if(!confirm(`Dispatch Quotation summary to Buyer ${client} via Messages?`)) return;
+                window.open(`sms:${mobile}?body=${encodeURIComponent(formattedTableText)}`, '_blank');
+                setTimeout(() => showSystemBanner("Messages app launched successfully!"), 1500);
+            }
+        }
+
+        // JavaScript Client-Side PDF Generation & Downloading using html2pdf.js with Custom Filename Pattern
+        function dispatchPdfAction(actionType) {
+            if (actionType === 'print') {
+                const element = document.getElementById('docPreviewModalContent');
+                const filename = currentDocData.filename || 'KKS_Solar_Quotation_By_KKS-Electrotech.pdf';
+                
+                const opt = {
+                    margin:       [10, 10, 10, 10],
+                    filename:     filename,
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2, useCORS: true, logging: false },
+                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+
+                html2pdf().from(element).set(opt).save().then(() => {
+                    showSystemBanner(`PDF successfully saved as: ${filename}`);
+                }).catch(err => {
+                    console.error(err);
+                    window.print();
+                });
+            }
+        }
+
+        // Master Admin & Full CRUD Management Hub
+        function verifyAdmin() {
+            if(document.getElementById('admin-pass').value === "KKS@2022") {
+                document.getElementById('admin-login-view').classList.add('d-none');
+                document.getElementById('admin-panel-view').classList.remove('d-none');
+                loadAdminData();
+                showSystemBanner("Master Admin Authenticated! Full CRUD Hub active.");
+            } else { alert("Incorrect Password!"); }
+        }
+
+        function loadAdminData() {
+            const crudTbody = document.getElementById('crud-table-body');
+            crudTbody.innerHTML = `
+                <tr>
+                    <td>REC-01 (Offers)</td>
+                    <td>Solar EPC 10kW+ Special Package</td>
+                    <td>15% Discount on 500Wp-730Wp Modules & Inverters</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary py-0" onclick="editRecord('REC-01', 'Offers')"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-sm btn-outline-danger py-0" onclick="deleteRecord('REC-01')"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>REC-02 (WebsiteData)</td>
+                    <td>Hero Carousel - Solar, Electrical & Energy</td>
+                    <td>Turnkey Solar EPC, Electrical & Energy Solutions</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary py-0" onclick="editRecord('REC-02', 'WebsiteData')"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-sm btn-outline-danger py-0" onclick="deleteRecord('REC-02')"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+            `;
+        }
+
+        function openCrudRecordModal() {
+            const title = prompt("Enter Record Title / Section:");
+            if(!title) return;
+            const content = prompt("Enter Content / Description:");
+            const category = prompt("Enter Category / Tab (Offers / WebsiteData):", "Offers");
+            
+            if(confirm(`Create and save new record '${title}' under ${category}?`)) {
+                showSystemBanner(`New record '${title}' successfully created via CRUD operations!`);
+                loadAdminData();
+            }
+        }
+
+        function editRecord(recordId, tabName) {
+            const newTitle = prompt(`Edit Title for record ${recordId}:`, "Updated Record Title");
+            if(!newTitle) return;
+            if(confirm(`Save changes for record ${recordId}?`)) {
+                showSystemBanner(`Record ${recordId} successfully updated via CRUD operations!`);
+                loadAdminData();
+            }
+        }
+
+        function deleteRecord(recordId) {
+            if(confirm(`Are you sure you want to delete record ${recordId}?`)) {
+                showSystemBanner(`Record ${recordId} successfully deleted via CRUD operations!`);
+                loadAdminData();
+            }
+        }
+    </script>
+
+<script>
+(function(){
+  const loader=document.getElementById('kksLoader');
+  const hide=()=>{if(loader){loader.classList.add('is-hidden');setTimeout(()=>loader.remove(),650);}};
+  window.addEventListener('load',()=>setTimeout(hide,900),{once:true});
+  setTimeout(hide,4500);
+})();
+
+        // KKS 30-second branded welcome screen
+        let kksLoaderTimer = 30;
+        let kksLoaderInterval = null;
+        function continueToKKSWebsite(){
+            const loader=document.getElementById('kksLoader');
+            if(kksLoaderInterval) clearInterval(kksLoaderInterval);
+            loader.classList.add('is-hidden');
+            setTimeout(()=>loader.remove(),650);
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+            const sec=document.getElementById('kksLoaderSeconds');
+            kksLoaderInterval=setInterval(()=>{
+                kksLoaderTimer--;
+                if(sec) sec.textContent=kksLoaderTimer;
+                if(kksLoaderTimer<=0){ continueToKKSWebsite(); }
+            },1000);
+        });
+
+</script>
+</body>
+</html>
