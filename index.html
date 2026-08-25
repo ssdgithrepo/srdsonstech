@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K K S Electrotech | Solar & Electrical Solutions | Deoli, Wardha</title>
+    <title>SRD Sons Technologies and Enterprises</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #0757a6;
-            --primary-dark: #063b73;
-            --accent-color: #1d8cf8;
-            --gold-color: #f4b400;
-            --white-color: #ffffff;
-            --soft-blue: #eef6ff;
+            --primary-color: #0f172a;
+            --accent-color: #0ea5e9;
+            --gold-color: #f59e0b;
         }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #334155; overflow-x: hidden; animation: fadeInPage 0.8s ease-in-out; }
         @keyframes fadeInPage { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -26,7 +23,7 @@
         }
         .animate-drop-down { animation: dropDownFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
-        .navbar { background: linear-gradient(90deg, var(--primary-dark), var(--primary-color)); }
+        .navbar { background-color: var(--primary-color); }
         
         /* Comprehensive Hover Effects */
         .btn, .nav-link, .card, .carousel-control-prev, .carousel-control-next, section, footer {
@@ -62,110 +59,10 @@
             #docPreviewModalContent { position: absolute !important; left: 0 !important; top: 0 !important; width: 100% !important; border: none !important; box-shadow: none !important; background: white !important; margin: 0; padding: 20px 20px 70px 20px !important; page-break-inside: avoid; }
             .no-print { display: none !important; }
         }
-        footer { background: linear-gradient(90deg, var(--primary-dark), var(--primary-color)); color: #cbd5e1; }
-
-        .kks-logo-mark {
-            position: relative;
-            width: 52px;
-            height: 42px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            border: 2px solid var(--gold-color);
-            border-radius: 10px;
-            box-shadow: 0 5px 16px rgba(7,87,166,.22);
-            letter-spacing: -3px;
-        }
-        .kks-logo-mark span { line-height: 1; }
-        .kks-k, .kks-k2, .kks-s { font-weight: 900; color: var(--primary-color); font-size: 18px; }
-        .kks-k2 { margin-left: -2px; }
-        .kks-s { margin-left: -2px; }
-        .kks-bolt {
-            position: absolute;
-            right: -7px;
-            top: -10px;
-            color: var(--gold-color);
-            background: var(--primary-dark);
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            display: grid;
-            place-items: center;
-            font-size: 15px;
-            letter-spacing: 0;
-            box-shadow: 0 2px 7px rgba(0,0,0,.2);
-        }
-        .hero-carousel-item::before {
-            background: linear-gradient(135deg, rgba(3,38,76,.90) 0%, rgba(7,87,166,.72) 100%);
-        }
-        .section-kicker {
-            color: var(--primary-color);
-            font-weight: 800;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            font-size: .78rem;
-        }
-        .gold-bolt { color: var(--gold-color) !important; }
-        .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
-        .btn-primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); }
-        .text-primary { color: var(--primary-color) !important; }
-        .bg-primary { background-color: var(--primary-color) !important; }
-
-    
-        .kks-loader{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:linear-gradient(135deg,#03264c 0%,#0757a6 55%,#eef6ff 140%);transition:opacity .55s ease,visibility .55s ease;}
-        .kks-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none;}
-        .kks-loader-logo{text-align:center;color:#fff;padding:30px;}
-        .kks-loader-mark{width:76px;height:62px;margin:0 auto 18px;border-radius:16px;transform:scale(1.05);animation:kksPulse 1.4s ease-in-out infinite;}
-        .kks-loader-mark .kks-k,.kks-loader-mark .kks-k2,.kks-loader-mark .kks-s{font-size:27px;}
-        .kks-loader-brand{font-size:clamp(28px,5vw,46px);font-weight:900;letter-spacing:.01em;}
-        .kks-loader-tagline{margin-top:9px;font-size:clamp(12px,2vw,16px);letter-spacing:.12em;text-transform:uppercase;color:#fff;}
-        .kks-loader-line{width:min(300px,70vw);height:3px;background:rgba(255,255,255,.2);margin:22px auto 0;border-radius:99px;overflow:hidden;}
-        .kks-loader-line span{display:block;width:35%;height:100%;background:#f4b400;border-radius:99px;animation:kksLoad 1.15s ease-in-out infinite;}
-        @keyframes kksPulse{50%{transform:scale(1.12);box-shadow:0 0 30px rgba(244,180,0,.35)}}
-        @keyframes kksLoad{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
-
-        .kks-loader-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
-        .kks-loader-count{font-size:12px;color:rgba(255,255,255,.86);margin-top:10px}
-        .kks-loader-btn{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 18px;font-weight:800;cursor:pointer;transition:.2s}
-        .kks-loader-btn-primary{background:#f4b400;color:#072e57;border-color:#f4b400}
-        .kks-loader-btn-light{background:rgba(255,255,255,.1);color:#fff}
-        .kks-loader-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
-        .kks-chat-brand{display:flex;align-items:center;gap:10px}
-        .kks-chat-logo{width:42px;height:34px;border-radius:9px;background:#fff;border:2px solid #f4b400;display:grid;place-items:center;position:relative;font-weight:900;color:#0757a6;letter-spacing:-2px}
-        .kks-chat-logo .kks-chat-bolt{position:absolute;right:-6px;top:-9px;background:#063b73;color:#f4b400;border-radius:50%;width:19px;height:19px;display:grid;place-items:center;font-size:12px;letter-spacing:0}
-        .kks-chat-name{font-weight:900;line-height:1.05}.kks-chat-sub{font-size:10px;opacity:.8;font-weight:500}
-
-</style>
-
-    <!--
-      KKS RESEARCHED BUSINESS DATA (verified online 24-Aug-2026):
-      - KKS Electrotech appears in ECE Solar's store locator at Chintamani Colony, Ward No 7, Deoli, Wardha, Maharashtra.
-      - Public enterprise listing: K.K.S. Electrotech, proprietorship, incorporated 06-May-2022,
-        Udyam/MSME: UDYAM-MH-34-0014347, Wardha, Maharashtra 442101.
-      - Business category surfaced by local search: Solar energy system service.
-      Do not publish unverified GST, bank, owner, phone, email or warranty claims without business-owner confirmation.
-    -->
-
+        footer { background-color: var(--primary-color); color: #cbd5e1; }
+    </style>
 </head>
 <body>
-    <!-- KKS Electrotech branded loading screen -->
-    <div id="kksLoader" class="kks-loader" aria-label="K K S Electrotech welcome screen">
-        <div class="kks-loader-logo">
-            <div class="kks-logo-mark kks-loader-mark"><span class="kks-k">K</span><span class="kks-k2">K</span><span class="kks-s">S</span><span class="kks-bolt">⚡</span></div>
-            <div class="kks-loader-brand">K K S Electrotech</div>
-            <div class="kks-loader-tagline">Powering Progress • Energizing Tomorrow</div>
-            <div class="small text-light mt-2">Solar • Electrical • Energy Solutions</div>
-            <div class="kks-loader-line"><span></span></div>
-            <div class="kks-loader-count">Website opens automatically in <strong id="kksLoaderSeconds">30</strong> seconds</div>
-            <div class="kks-loader-actions">
-                <button class="kks-loader-btn kks-loader-btn-primary" type="button" onclick="continueToKKSWebsite()"><i class="fa-solid fa-arrow-right me-1"></i> Continue to Website</button>
-                <button class="kks-loader-btn kks-loader-btn-light" type="button" onclick="continueToKKSWebsite()"><i class="fa-solid fa-house me-1"></i> Enter Home</button>
-            </div>
-        </div>
-    </div>
-    </div>
-
 
     <!-- System Global Notification Banner -->
     <div id="systemAlertBanner" class="alert alert-info text-center rounded-0 mb-0 py-2 small d-none shadow-sm animate-drop-down" role="alert">
@@ -175,14 +72,11 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
-                <div class="kks-logo-mark me-2" aria-label="KKS Electrotech logo">
-                    <span class="kks-k">K</span><span class="kks-k2">K</span><span class="kks-s">S</span>
-                    <span class="kks-bolt">⚡</span>
-                </div>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <div class="bg-warning text-dark p-2 rounded-3 me-2 fs-5"><i class="fa-solid fa-network-wired"></i><i class="fa-solid fa-solar-panel ms-1"></i></div>
                 <div>
-                    <span class="d-block lh-1 fs-5">K K S Electrotech</span>
-                    <small style="font-size: 9px;" class="text-info">Solar • Electrical • Energy</small>
+                    <span class="d-block lh-1 fs-6">SRD Sons</span>
+                    <small style="font-size: 9px;" class="text-info">Tech • Renewable • Enterprise</small>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -191,7 +85,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#legacy">About KKS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#legacy">Legacy</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services & Solar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#offers-section">Special Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
@@ -219,18 +113,18 @@
             <div class="carousel-inner">
                 <div class="carousel-item active hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600');">
                     <div class="container text-center hero-content">
-                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-bolt me-1"></i> Solar & Electrical Solutions</span>
-                         <h1 class="display-5 fw-bold mb-3 text-white">K K S Electrotech <span class="gold-bolt">⚡</span></h1>
-                         <p class="lead text-light mb-4">Solar energy systems, electrical solutions and dependable technology support from Deoli, Wardha.</p>
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-network-wired me-1"></i> Technologies & ERP Solutions</span>
+                        <h1 class="display-5 fw-bold mb-3 text-white">SRD Sons Technologies and Enterprises</h1>
+                        <p class="lead text-light mb-4">Custom Enterprise ERP, Software Dashboards, and Digital Architecture.</p>
                         <a href="#services" class="btn btn-warning btn-lg fw-semibold px-4 me-2">Explore Services</a>
                     </div>
                 </div>
                 <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600');">
                     <div class="container text-center hero-content">
-                        <span class="badge bg-primary mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-landmark me-1"></i> Trusted Local Energy Solutions</span>
-                        <h1 class="display-5 fw-bold mb-3">Built for Local Homes, Businesses & Industries</h1>
-                        <p class="lead text-light mb-4">Practical solar and electrical solutions designed around your site, energy needs and budget.</p>
-                        <a href="#legacy" class="btn btn-primary btn-lg fw-semibold px-4">Why Choose KKS</a>
+                        <span class="badge bg-primary mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-landmark me-1"></i> Rich Industrial Legacy</span>
+                        <h1 class="display-5 fw-bold mb-3">Foundational Roots Since 1969 & 1989</h1>
+                        <p class="lead text-light mb-4">Decades of industrial trust under R. R. Deotale and owner S. R. Deotale (S R D).</p>
+                        <a href="#legacy" class="btn btn-primary btn-lg fw-semibold px-4">View Legacy Details</a>
                     </div>
                 </div>
                 <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1509391365330-2e4a674158ae?auto=format&fit=crop&q=80&w=1600');">
@@ -243,9 +137,9 @@
                 </div>
                 <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1600');">
                     <div class="container text-center hero-content">
-                        <span class="badge bg-danger mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-tags me-1"></i> Current Area Deals</span>
+                        <span class="badge bg-danger mb-3 px-3 py-2 fw-semibold"><i class="fa-solid fa-tags me-1"></i> Limited-Time Deals</span>
                         <h1 class="display-5 fw-bold mb-3">Exclusive Special Commercial Offers</h1>
-                        <p class="lead text-light mb-4">Looking for a better price? Connect with K K S Electrotech for the best current deal available in your area. Offers may vary by location, project size, system configuration and current campaign.</p>
+                        <p class="lead text-light mb-4">Avail special seasonal discounts on our 10kW+ turnkey solar packages and custom ERP setups.</p>
                         <a href="#offers-section" class="btn btn-danger btn-lg fw-semibold px-4">View Active Offers</a>
                     </div>
                 </div>
@@ -261,15 +155,15 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="p-4 bg-white rounded-4 shadow-sm border-start border-4 border-warning">
-                        <h2 class="fw-bold mb-3 text-dark">Local Solar & Electrotechnical Expertise</h2>
-                         <p class="text-muted">K K S Electrotech is listed as a local solar energy system service in Deoli, Wardha. Public business records identify the enterprise as a proprietorship established on 06-May-2022, with MSME/Udyam registration <strong>UDYAM-MH-34-0014347</strong>.</p>
-                         <p class="mb-0 fw-semibold text-primary"><i class="fa-solid fa-location-dot me-2"></i>Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra - 442101</p>
+                        <h2 class="fw-bold mb-3 text-dark">A Rich Legacy Combining Tech, Energy & Enterprise</h2>
+                        <p class="text-muted">Foundational roots date back to <strong>1969</strong> under <strong>R. R. Deotale</strong>. Carrying forward decades of industrial expertise, owner <strong>S. R. Deotale (S R D)</strong> expanded the enterprise in <strong>1989</strong> into advanced software technologies, renewable energy (Solar 500Wp-730Wp / BESS / Wind), and commercial trading.</p>
+                        <p class="mb-0 fw-semibold text-primary"><i class="fa-solid fa-location-dot me-2"></i> Headquarters: Dhanora Gurav & Vijay Nagar, Amravati, Maharashtra.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="row g-3">
-                        <div class="col-6"><div class="p-4 bg-primary text-white rounded-4 text-center shadow-sm"><h3 class="fw-bold display-5 mb-1">2022</h3><p class="mb-0 small">Enterprise Established</p></div></div>
-                        <div class="col-6"><div class="p-4 bg-warning text-dark rounded-4 text-center shadow-sm"><h3 class="fw-bold display-5 mb-1">442101</h3><p class="mb-0 small">Deoli PIN</p></div></div>
+                        <div class="col-6"><div class="p-4 bg-primary text-white rounded-4 text-center shadow-sm"><h3 class="fw-bold display-5 mb-1">1969</h3><p class="mb-0 small">Legacy Roots</p></div></div>
+                        <div class="col-6"><div class="p-4 bg-warning text-dark rounded-4 text-center shadow-sm"><h3 class="fw-bold display-5 mb-1">1989</h3><p class="mb-0 small">Tech & Energy Era</p></div></div>
                     </div>
                 </div>
             </div>
@@ -281,7 +175,7 @@
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Our Comprehensive Services & Solar Offerings</h2>
-                <p class="text-muted">Solar PV systems, electrical solutions, energy storage and dependable project support.</p>
+                <p class="text-muted">Featuring high-grade Solar PV modules (500Wp to 730Wp), software ERP, and industrial trading.</p>
             </div>
             
             <div id="servicesCarousel" class="carousel slide shadow-sm rounded-4 overflow-hidden p-3 bg-white border" data-bs-ride="carousel" data-bs-interval="4500">
@@ -311,6 +205,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card service-card p-4 h-100 bg-light border-0">
+                                    <div class="mb-3 text-primary fs-2"><i class="fa-solid fa-code"></i></div>
+                                    <h4 class="fw-bold h5">Software Development</h4>
+                                    <p class="text-muted small">Custom enterprise resource planning systems, sales management dashboards, and database tools.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card p-4 h-100 bg-light border-0">
+                                    <div class="mb-3 text-warning fs-2"><i class="fa-solid fa-globe"></i></div>
+                                    <h4 class="fw-bold h5">Website Design & Development</h4>
+                                    <p class="text-muted small">Modern, responsive, mobile-friendly web portals optimized for speed and conversion.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card p-4 h-100 bg-light border-0">
+                                    <div class="mb-3 text-danger fs-2"><i class="fa-solid fa-mobile-screen"></i></div>
+                                    <h4 class="fw-bold h5">Mobile App Development</h4>
+                                    <p class="text-muted small">Cross-platform mobile applications with dynamic invoice rendering and real-time alerts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" onclick="moveCarousel('servicesCarousel', 'prev')"><span class="carousel-control-prev-icon bg-dark rounded-circle"></span></button>
                 <button class="carousel-control-next" type="button" onclick="moveCarousel('servicesCarousel', 'next')"><span class="carousel-control-next-icon bg-dark rounded-circle"></span></button>
@@ -322,16 +241,16 @@
     <section id="offers-section" class="py-5 bg-light">
         <div class="container py-4">
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Exclusive Current Deals & Offers</h2>
-                <p class="text-muted">Current local deals are updated based on project requirements, availability and running offers. Connect with us and our team will share the best offer currently available for your area.</p>
+                <h2 class="fw-bold">Exclusive Special Offers & Deals</h2>
+                <p class="text-muted">Take advantage of limited-time commercial pricing on our solar (500Wp-730Wp) and IT services.</p>
             </div>
             <div id="dynamicOffersContainer" class="row g-4">
                 <div class="col-md-4">
                     <div class="card offer-card p-4 h-100 bg-white border-start border-4 border-warning shadow-sm">
-                        <span class="badge bg-primary mb-2">Current Area Offer</span>
-                        <h4 class="fw-bold h5">Ask for Today’s Best Solar & Electrical Deal</h4>
-                        <p class="text-muted small">Tell us your location, project type and approximate requirement. Our team will check the current offers running in your area and provide you with the most suitable available price or package.</p>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm fw-semibold">Connect for Current Offer</a>
+                        <span class="badge bg-danger mb-2 w-50">Save 15%</span>
+                        <h4 class="fw-bold h5">Solar EPC 10kW+ Special Package</h4>
+                        <p class="text-muted small">Includes Kosol/Waaree 550Wp-730Wp modules and Sungrow 3-Phase Inverter with free net-metering liaison.</p>
+                        <p class="mb-0 small fw-bold text-primary"><i class="fa-solid fa-clock me-1"></i> Valid Till: 2026-09-30</p>
                     </div>
                 </div>
             </div>
@@ -343,7 +262,7 @@
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Client Testimonials & Reviews</h2>
-                <p class="text-muted">What our valued consumers and business partners say about K K S.</p>
+                <p class="text-muted">What our valued consumers and business partners say about SRD Sons.</p>
             </div>
             
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
@@ -353,9 +272,9 @@
                             <div class="col-md-8">
                                 <div class="card testimonial-card p-4 bg-white shadow-sm border text-center rounded-4">
                                     <div class="text-warning mb-3 fs-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                                    <p class="fst-italic mb-3">"K K S installed a high-capacity solar rooftop system at our industrial facility in Wardha. Their technical precision, quality BOM, and prompt support under K K S Electrotech team are truly commendable."</p>
+                                    <p class="fst-italic mb-3">"SRD Sons installed a high-capacity solar rooftop system at our industrial facility in Amravati. Their technical precision, quality BOM, and prompt support under owner S R D are truly commendable."</p>
                                     <h5 class="fw-bold mb-0">Anil Deshmukh</h5>
-                                    <small class="text-muted">Industrial Plant Owner, Deoli / Wardha</small>
+                                    <small class="text-muted">Industrial Plant Owner, Amravati</small>
                                 </div>
                             </div>
                         </div>
@@ -365,9 +284,9 @@
                             <div class="col-md-8">
                                 <div class="card testimonial-card p-4 bg-white shadow-sm border text-center rounded-4">
                                     <div class="text-warning mb-3 fs-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                                    <p class="fst-italic mb-3">"K K S Electrotech provided a professional solar and electrical solution with clear project coordination and dependable technical support."</p>
+                                    <p class="fst-italic mb-3">"We collaborated with SRD Sons for our custom software ERP and enterprise website development. Their team delivered an exceptionally responsive platform on time."</p>
                                     <h5 class="fw-bold mb-0">Dr. Rajesh Kulkarni</h5>
-                                    <small class="text-muted">Technology & Business Client, Maharashtra</small>
+                                    <small class="text-muted">Tech Enterprise Director, Maharashtra</small>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +301,7 @@
     <!-- Contact Us -->
     <section id="contact" class="py-5 bg-light">
         <div class="container py-4">
-            <div class="text-center mb-5"><h2 class="fw-bold">Contact Us & Enquiry Portal</h2><p class="text-muted">Connect directly with K K S Electrotech team.</p></div>
+            <div class="text-center mb-5"><h2 class="fw-bold">Contact Us & Enquiry Portal</h2><p class="text-muted">Connect directly with owner S R D.</p></div>
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="p-4 bg-white rounded-4 shadow-sm border animate-drop-down">
@@ -405,21 +324,17 @@
     <div id="chat-widget-container">
         <div id="chatBox" class="chat-box animate-drop-down">
             <div class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
-                <div class="kks-chat-brand">
-                    <div class="kks-chat-logo">KKS<span class="kks-chat-bolt">⚡</span></div>
-                    <div><div class="kks-chat-name">K K S Electrotech</div><div class="kks-chat-sub">AI-style enquiry assistant • Solar & Electrical</div></div>
-                </div>
-                <button class="btn-close btn-close-white btn-sm" onclick="toggleChat()" aria-label="Close chat"></button>
+                <h6 class="mb-0"><i class="fa-solid fa-headset text-warning me-2"></i>SRD Live Product Support</h6>
+                <button class="btn-close btn-close-white btn-sm" onclick="toggleChat()"></button>
             </div>
             <div id="chatBody" class="p-3" style="height: 250px; overflow-y: auto; background: #f8fafc;">
                 <div class="p-2 bg-white rounded shadow-sm mb-2 small border-start border-3 border-warning">
-                    <div class="kks-chat-brand mb-2"><div class="kks-chat-logo">KKS<span class="kks-chat-bolt">⚡</span></div><div><strong>K K S Electrotech</strong><div class="text-muted">Welcome! We’re here to help.</div></div></div>
-                    <strong>How can we help you today?</strong>
+                    <strong>SRD Support:</strong> Welcome to SRD Sons Technologies and Enterprises! Please choose a service you would like to explore:<br>
                     <div class="mt-2 d-grid gap-1">
-                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Solar Rooftop / Solar EPC')">☀️ Solar Rooftop / Solar EPC</button>
-                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Electrical Work')">⚡ Electrical Work & Solutions</button>
-                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Battery Energy Storage')">🔋 Battery / Energy Storage</button>
-                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Current Offers')">🏷️ Current Deals & Offers</button>
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Solar EPC (500Wp-730Wp)')">1. Solar PV & EPC Systems</button>
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('BESS & Wind')">2. Battery Storage & Wind Energy</button>
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Software & ERP')">3. Custom Software & ERP Apps</button>
+                        <button class="btn btn-outline-primary btn-sm text-start" onclick="selectChatService('Digital Marketing & Trading')">4. Digital Marketing & Trading</button>
                     </div>
                 </div>
             </div>
@@ -443,9 +358,9 @@
     <!-- Footer -->
     <footer class="py-4 text-center">
         <div class="container">
-            <p class="mb-1 fw-bold">&copy; 2026 K K S Electrotech. All Rights Reserved.</p>
-            <p class="small text-secondary mb-1">Proprietorship Enterprise | Solar • Electrical • Energy Solutions | Deoli, Wardha</p>
-            <p class="small text-secondary mb-0"><i class="fa-solid fa-location-dot me-1"></i> Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra - 442101 | <i class="fa-solid fa-id-card me-1"></i> Udyam: UDYAM-MH-34-0014347</p>
+            <p class="mb-1 fw-bold">&copy; 2026 SRD Sons Technologies and Enterprises. All Rights Reserved.</p>
+            <p class="small text-secondary mb-1">Owner: S. R. Deotale (S R D) | Technologies, Renewable Energy & Enterprises Since 1969</p>
+            <p class="small text-secondary mb-0"><i class="fa-solid fa-location-dot me-1"></i> Headquarters: Dhanora Gurav & Vijay Nagar, Amravati, Maharashtra | <i class="fa-solid fa-phone me-1"></i> +91 9403618841 | <i class="fa-solid fa-envelope me-1"></i> srdsons.info@gmail.com</p>
         </div>
     </footer>
 
@@ -487,7 +402,7 @@
                             <div class="col-md-3"><label class="form-label small fw-bold">Client Name</label><input type="text" id="docClientName" class="form-control" placeholder="Client Name"></div>
                             <div class="col-md-3">
                                 <label class="form-label small fw-bold">Client Mobile</label>
-                                <div class="input-group"><input type="text" id="docClientMobile" class="form-control" placeholder="91"><button class="btn btn-outline-secondary btn-sm" type="button" onclick="pickContact('docClientMobile')"><i class="fa-solid fa-address-book"></i></button></div>
+                                <div class="input-group"><input type="text" id="docClientMobile" class="form-control" placeholder="919403618841"><button class="btn btn-outline-secondary btn-sm" type="button" onclick="pickContact('docClientMobile')"><i class="fa-solid fa-address-book"></i></button></div>
                             </div>
                             <div class="col-md-3"><label class="form-label small fw-bold">Client Email</label><input type="email" id="docClientEmail" class="form-control" placeholder="client@email.com"></div>
                             <div class="col-12"><label class="form-label small fw-bold">Client Full Address</label><input type="text" id="docClientAddress" class="form-control" placeholder="Client Street Address, City, State, Pincode"></div>
@@ -582,11 +497,11 @@
                 <div class="modal-body bg-white" id="docPreviewModalContent" style="padding: 20px 20px 70px 20px;">
                     <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2 flex-wrap gap-2">
                         <div>
-                            <h4 class="fw-bold text-primary mb-0" style="font-size: 1.15rem;"><i class="fa-solid fa-network-wired text-warning me-2"></i>K K S Electrotech</h4>
-                            <small class="text-muted" style="font-size: 9.5px;">Headquarters: Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra<br>| Email: Contact details available on request | Phone: </small>
+                            <h4 class="fw-bold text-primary mb-0" style="font-size: 1.15rem;"><i class="fa-solid fa-network-wired text-warning me-2"></i>SRD Sons Technologies & Enterprises</h4>
+                            <small class="text-muted" style="font-size: 9.5px;">Headquarters: Dhanora Gurav & Vijay Nagar, Amravati, Maharashtra<br>Owner: S R D | Email: srdsons.info@gmail.com | Phone: +91 9403618841</small>
                         </div>
                         <div class="text-end">
-                            <div id="previewCompanyLogo" class="badge bg-dark text-warning p-2 fs-6 mb-1"><i class="fa-solid fa-bolt me-1"></i> Solar • Electrical • Energy</div>
+                            <div id="previewCompanyLogo" class="badge bg-dark text-warning p-2 fs-6 mb-1"><i class="fa-solid fa-bolt me-1"></i> Tech • Renewable • Enterprise</div>
                             <h5 class="fw-bold text-dark mb-0 fs-6" id="previewDocTitle">QUOTATION</h5>
                             <p class="mb-0 small" style="font-size: 9.5px;"><strong>Date:</strong> <span id="previewDate"></span></p>
                         </div>
@@ -594,7 +509,7 @@
                     
                     <div class="row mb-2 small" style="font-size: 10.5px;">
                         <div class="col-7"><p class="mb-1"><strong>Buyer:</strong> <span id="prevClient"></span></p><p class="mb-1"><strong>Address:</strong> <span id="prevAddress"></span></p><p class="mb-1"><strong>Mobile:</strong> <span id="prevMobile"></span></p><p class="mb-0"><strong>Email:</strong> <span id="prevEmail"></span></p></div>
-                        <div class="col-5 text-end"><p class="mb-1"><strong>Seller:</strong> K K S Electrotech</p><p class="mb-0">State Code: 27 (Maharashtra)</p></div>
+                        <div class="col-5 text-end"><p class="mb-1"><strong>Seller:</strong> SRD Sons Technologies & Enterprises</p><p class="mb-0">State Code: 27 (Maharashtra)</p></div>
                     </div>
 
                     <div class="table-responsive mb-2">
@@ -632,32 +547,32 @@
                         <div class="row g-2 align-items-center">
                             <div class="col-md-4 border-end">
                                 <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-building-columns text-primary me-1"></i> Bank & GST Details</h6>
-                                <p class="mb-1"><strong>GSTIN:</strong> 27AEXXXXX2022Z1</p>
-                                <p class="mb-1"><strong>Bank:</strong> Bank details to be configured</p>
-                                <p class="mb-0"><strong>A/c No:</strong> 38500202241 | <strong>IFSC:</strong> —</p>
+                                <p class="mb-1"><strong>GSTIN:</strong> 27AEXXXXX1989Z1</p>
+                                <p class="mb-1"><strong>Bank:</strong> State Bank of India (SBI)</p>
+                                <p class="mb-0"><strong>A/c No:</strong> 38500198941 | <strong>IFSC:</strong> SBIN0000123</p>
                             </div>
                             <div class="col-md-4 border-end px-2">
                                 <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-location-dot text-danger me-1"></i> Corporate Headquarters</h6>
-                                <p class="mb-1 text-muted">Chintamani Colony, Ward No. 7, Deoli, Wardha, Maharashtra - 442101</p>
-                                <p class="mb-0 text-muted"><i class="fa-solid fa-phone me-1"></i> </p>
+                                <p class="mb-1 text-muted">Dhanora Gurav & Vijay Nagar, Amravati, Maharashtra - 444601</p>
+                                <p class="mb-0 text-muted"><i class="fa-solid fa-phone me-1"></i> +91 9403618841</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p class="mb-0 fw-bold text-dark" style="font-size: 9.5px;">For K K S Electrotech</p>
+                                <p class="mb-0 fw-bold text-dark" style="font-size: 9.5px;">For SRD Sons Technologies & Enterprises</p>
                                 <div style="height: 14px;"></div>
-                                <p class="mb-0 fw-semibold text-primary" style="font-size: 9.5px;"><span class="text-muted" style="font-size: 8.5px;">Authorized Signatory</span></p>
+                                <p class="mb-0 fw-semibold text-primary" style="font-size: 9.5px;">(S. R. Deotale - S R D)<br><span class="text-muted" style="font-size: 8.5px;">Authorized Signatory & Proprietor</span></p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Tagline Section -->
                     <div class="p-2 bg-white rounded border border-start border-4 border-info small mb-2 text-center" style="font-size: 10px;">
-                        <span class="fw-bold text-primary"><i class="fa-solid fa-bolt text-warning me-1"></i> Tagline:</span> <span class="fst-italic text-dark">"Empowering Tomorrow with Advanced Technology, Renewable Energy & Trusted Industrial Excellence Since 2022."</span>
+                        <span class="fw-bold text-primary"><i class="fa-solid fa-bolt text-warning me-1"></i> Tagline:</span> <span class="fst-italic text-dark">"Empowering Tomorrow with Advanced Technology, Renewable Energy & Trusted Industrial Excellence Since 1969."</span>
                     </div>
 
                     <!-- About Us Section -->
                     <div class="p-2 bg-light rounded border border-start border-4 border-warning small mb-2" style="font-size: 9.5px; line-height: 1.35;">
-                        <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-circle-info text-warning me-1"></i> About Us - K K S Electrotech</h6>
-                        <p class="text-muted mb-0">Building upon trusted industrial roots since <strong>2022</strong> with a focus on practical solar, electrical and renewable-energy solutions for customers in Deoli, Wardha and surrounding areas.</p>
+                        <h6 class="fw-bold text-dark mb-1" style="font-size: 10px;"><i class="fa-solid fa-circle-info text-warning me-1"></i> About Us - SRD Sons Technologies and Enterprises</h6>
+                        <p class="text-muted mb-0">Building upon trusted industrial roots since <strong>1969</strong> under R. R. Deotale and expanded into cutting-edge technology and renewable energy in <strong>1989</strong> by owner <strong>S. R. Deotale (S R D)</strong>, SRD Sons is a premier enterprise based in Amravati, Maharashtra.</p>
                     </div>
 
                     <!-- Core Services & Offerings Section -->
@@ -668,8 +583,8 @@
                             <li>Commercial and Industrial Solar EPC Projects</li>
                             <li>Turnkey Solar EPC Projects - (By Using 500Wp-730Wp Tier-1 PV Modules)</li>
                             <li>Battery Energy Storage Systems (BESS)</li>
-                            <li>Electrical Project Support & Maintenance</li>
-                            <li>Electrical & Energy Product Supply</li>
+                            <li>Custom Enterprise Software ERP & Mobile Apps</li>
+                            <li>Wholesale Industrial Trading</li>
                         </ul>
                     </div>
                 </div>
@@ -794,62 +709,58 @@
             box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
         }
 
-        function appendChatMessage(html, type='support') {
-            const body = document.getElementById('chatBody');
-            const wrap = document.createElement('div');
-            wrap.className = 'p-2 rounded shadow-sm mb-2 small ' + (type === 'user' ? 'bg-light text-end' : 'bg-white border-start border-3 border-success');
-            wrap.innerHTML = html;
-            body.appendChild(wrap);
-            body.scrollTop = body.scrollHeight;
-        }
-
-        function kksAiReply(query, name='') {
-            const q = String(query || '').toLowerCase();
-            let reply = 'Thank you for contacting K K S Electrotech. Our team member will review your requirement and connect with you soon.';
-            if (q.includes('offer') || q.includes('deal') || q.includes('price') || q.includes('discount')) {
-                reply = 'Absolutely. Current offers can vary by area, project size, system configuration and the offers running at the time of enquiry. Share your location and requirement, and our K K S Electrotech team will provide the best current offer available in your area.';
-            } else if (q.includes('solar') || q.includes('rooftop') || q.includes('epc')) {
-                reply = 'For solar enquiries, please share your location, average monthly electricity bill (if available), and whether the project is residential, commercial or industrial. A K K S Electrotech team member will review it and connect with you soon.';
-            } else if (q.includes('electrical') || q.includes('wiring') || q.includes('panel') || q.includes('installation')) {
-                reply = 'We can help with electrical requirements, installation, testing and related energy solutions. Please share a short description of the work and your location; our team member will connect with you soon.';
-            } else if (q.includes('battery') || q.includes('storage') || q.includes('backup')) {
-                reply = 'For battery and energy-storage requirements, please share your load/backup requirement and location. Our team will review the requirement and recommend a suitable solution.';
-            }
-            return ` <strong>KKS AI Assistant:</strong> ${reply}<br><span class="text-primary fw-semibold">${name ? 'Thank you, '+escapeHtml(name)+'. ' : ''}A team member will connect with you soon.</span>`;
-        }
-
-        function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
-
         function selectChatService(serviceName) {
-            appendChatMessage(`<strong>You:</strong> I want information about ${escapeHtml(serviceName)}.`, 'user');
-            setTimeout(() => appendChatMessage(kksAiReply(serviceName)), 650);
+            const body = document.getElementById('chatBody');
+            body.innerHTML += `<div class="p-2 bg-light rounded shadow-sm mb-2 small text-end"><strong>You:</strong> I want info on ${serviceName}</div>`;
+            
+            let infoText = "";
+            if (serviceName.includes("Solar")) {
+                infoText = "SRD Sons offers Turnkey Solar EPC solutions using high-grade 500Wp to 730Wp Tier-1 PV modules (Kosol, Waaree, Adani) and MPPT Inverters.";
+            } else if (serviceName.includes("BESS")) {
+                infoText = "We provide advanced Battery Energy Storage Systems (BESS) and wind-solar hybrid power equipment for industrial reliability.";
+            } else if (serviceName.includes("Software")) {
+                infoText = "We build custom Enterprise Resource Planning (ERP) software, web apps, and mobile dashboards with real-time Google Sheets database sync.";
+            } else {
+                infoText = "We provide industrial wholesale trading and targeted digital marketing campaigns with professional video voiceovers.";
+            }
+
+            setTimeout(() => {
+                body.innerHTML += `<div class="p-2 bg-white rounded shadow-sm mb-2 small border-start border-3 border-success"><strong>SRD Support (${serviceName}):</strong> ${infoText}<br><span class="text-primary fw-semibold">Owner S R D and our team are ready to assist you!</span></div>`;
+                body.scrollTop = body.scrollHeight;
+            }, 600);
         }
 
         function sendChatMessage() {
-            const name = document.getElementById('chatName').value.trim();
-            const phone = document.getElementById('chatPhone').value.trim();
-            const msg = document.getElementById('chatMessage').value.trim();
-            if(!name || !msg) { alert('Please enter your name and query.'); return; }
-            appendChatMessage(`<strong>${escapeHtml(name)}${phone ? ' ('+escapeHtml(phone)+')' : ''}:</strong> ${escapeHtml(msg)}`, 'user');
+            const name = document.getElementById('chatName').value;
+            const phone = document.getElementById('chatPhone').value;
+            const msg = document.getElementById('chatMessage').value;
+            if(!name || !msg) { alert("Please enter your name and message."); return; }
+            
+            const body = document.getElementById('chatBody');
+            body.innerHTML += `<div class="p-2 bg-light rounded shadow-sm mb-2 small text-end"><strong>${name} (${phone}):</strong> ${msg}</div>`;
             document.getElementById('chatMessage').value = '';
-            let chatLogs = JSON.parse(localStorage.getItem('kks_chat_logs') || '[]');
+            body.scrollTop = body.scrollHeight;
+
+            let chatLogs = JSON.parse(localStorage.getItem('srd_chat_logs') || '[]');
             chatLogs.push({ name, phone, msg, time: new Date().toLocaleString() });
-            localStorage.setItem('kks_chat_logs', JSON.stringify(chatLogs));
+            localStorage.setItem('srd_chat_logs', JSON.stringify(chatLogs));
+            
             setTimeout(() => {
-                appendChatMessage(kksAiReply(msg, name));
-                showSystemBanner('Your enquiry has been recorded. A K K S Electrotech team member will connect with you soon.');
-            }, 900);
+                body.innerHTML += `<div class="p-2 bg-white rounded shadow-sm mb-2 small border-start border-3 border-success"><strong>SRD Support:</strong> Thank you ${name}. Your query has been recorded and sent to owner S R D.</div>`;
+                body.scrollTop = body.scrollHeight;
+                showSystemBanner("Chat message successfully stored and sent to SRD Support!");
+            }, 1000);
         }
 
         function handleFormSubmit(e) {
             e.preventDefault();
-            if(!confirm("Submit this enquiry to K K S?")) return;
+            if(!confirm("Submit this enquiry to SRD Sons?")) return;
             const form = document.getElementById('enquiryForm');
             fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
                 .then(res => { 
                     if(res.ok) { 
-                        showSystemBanner("Enquiry successfully submitted to Contact details available on request!");
-                        alert("Enquiry successfully submitted! Transmission sent to K K S Electrotech team.");
+                        showSystemBanner("Enquiry successfully submitted to srdsons.info@gmail.com!");
+                        alert("Enquiry successfully submitted! Transmission sent to owner S R D.");
                         form.reset(); 
                     } 
                 });
@@ -857,11 +768,11 @@
 
         function unlockQuotationPortal() {
             const pass = document.getElementById('quotationPassInput').value;
-            if(pass === "KKS@2022") {
+            if(pass === "SRD@1989") {
                 document.getElementById('quotationAuthBox').classList.add('d-none');
                 document.getElementById('quotationMainContent').classList.remove('d-none');
                 showSystemBanner("Quotation Generator unlocked successfully!");
-            } else { alert("Incorrect password! Default is KKS@2022"); }
+            } else { alert("Incorrect password! Default is SRD@1989"); }
         }
 
         // Standardized 500Wp to 730Wp Module Range Mapping
@@ -1025,7 +936,7 @@
             
             const safeClient = client.replace(/[^a-zA-Z0-9]/g, '_');
             const safeCategory = category.replace(/[^a-zA-Z0-9]/g, '_');
-            const customFilename = `${safeClient}_${safeCategory}_${kwSize}kW_By_KKS-Electrotech.pdf`;
+            const customFilename = `${safeClient}_${safeCategory}_${kwSize}kW_By_SRD-Sons-Tech.pdf`;
 
             currentDocData = { client, address, mobile, email, grandTotal: grand.toFixed(2), filename: customFilename, category, kwSize };
             
@@ -1061,7 +972,7 @@
             const address = currentDocData.address || "N/A";
             const date = document.getElementById('previewDate').innerText;
             const grandTotal = document.getElementById('summaryGrandTotal').innerText;
-            let text = `*K K S ELECTROTECH*\n`;
+            let text = `*SRD SONS TECHNOLOGIES & ENTERPRISES*\n`;
             text += `*OFFICIAL QUOTATION SUMMARY*\n`;
             text += `----------------------------------------\n`;
             text += `*Buyer:* ${client}\n`;
@@ -1076,15 +987,15 @@
             text += `----------------------------------------\n`;
             text += `*GRAND TOTAL:* *${grandTotal}*\n`;
             text += `----------------------------------------\n`;
-            text += `*Bank Details:* SBI A/c 38500202241 | IFSC: —\n`;
-            text += `*Contact:*  | Contact details available on request\n`;
+            text += `*Bank Details:* SBI A/c 38500198941 | IFSC: SBIN0000123\n`;
+            text += `*Contact:* +91 9403618841 | srdsons.info@gmail.com\n`;
             text += `_(PDF Document Generated: ${currentDocData.filename})_`;
             return text;
         }
 
         // JavaScript Direct Platform Dispatch (WhatsApp, Email, SMS) with Automatic PDF File Generation
         function dispatchTablePlatform(platformType) {
-            let mobile = currentDocData.mobile || "";
+            let mobile = currentDocData.mobile || "9403618841";
             mobile = mobile.replace(/[^0-9]/g, '');
             const client = currentDocData.client || "Valued Client";
             const formattedTableText = buildFormattedTabularText();
@@ -1097,9 +1008,9 @@
                 window.open(`whatsapp://send?phone=${mobile}&text=${encodeURIComponent(formattedTableText)}`, '_blank');
                 setTimeout(() => showSystemBanner("WhatsApp share interface launched! Attach downloaded PDF file: " + currentDocData.filename), 1500);
             } else if (platformType === 'email') {
-                if(!confirm(`Dispatch Quotation summary & PDF to Buyer ${currentDocData.email || 'Contact details available on request'} via Email?`)) return;
-                const recipient = currentDocData.email || "Contact details available on request";
-                window.location.href = `mailto:${recipient}?subject=K K S Official Quotation - ${client} (${currentDocData.kwSize}kW)&body=${encodeURIComponent(formattedTableText)}`;
+                if(!confirm(`Dispatch Quotation summary & PDF to Buyer ${currentDocData.email || 'srdsons.info@gmail.com'} via Email?`)) return;
+                const recipient = currentDocData.email || "srdsons.info@gmail.com";
+                window.location.href = `mailto:${recipient}?subject=SRD Sons Official Quotation - ${client} (${currentDocData.kwSize}kW)&body=${encodeURIComponent(formattedTableText)}`;
                 setTimeout(() => showSystemBanner("Email client launched! Attach downloaded PDF file: " + currentDocData.filename), 1500);
             } else if (platformType === 'sms') {
                 if(!confirm(`Dispatch Quotation summary to Buyer ${client} via Messages?`)) return;
@@ -1112,7 +1023,7 @@
         function dispatchPdfAction(actionType) {
             if (actionType === 'print') {
                 const element = document.getElementById('docPreviewModalContent');
-                const filename = currentDocData.filename || 'KKS_Solar_Quotation_By_KKS-Electrotech.pdf';
+                const filename = currentDocData.filename || 'SRD_Solar_Quotation_By_SRD-Sons-Tech.pdf';
                 
                 const opt = {
                     margin:       [10, 10, 10, 10],
@@ -1133,7 +1044,7 @@
 
         // Master Admin & Full CRUD Management Hub
         function verifyAdmin() {
-            if(document.getElementById('admin-pass').value === "KKS@2022") {
+            if(document.getElementById('admin-pass').value === "SRD@1989") {
                 document.getElementById('admin-login-view').classList.add('d-none');
                 document.getElementById('admin-panel-view').classList.remove('d-none');
                 loadAdminData();
@@ -1156,8 +1067,8 @@
                 </tr>
                 <tr>
                     <td>REC-02 (WebsiteData)</td>
-                    <td>Hero Carousel - Solar, Electrical & Energy</td>
-                    <td>Turnkey Solar EPC, Electrical & Energy Solutions</td>
+                    <td>Hero Carousel - Tech, Renewable & Enterprise</td>
+                    <td>Turnkey Solar EPC (500Wp-730Wp) & Custom ERP</td>
                     <td><span class="badge bg-success">Active</span></td>
                     <td>
                         <button class="btn btn-sm btn-outline-primary py-0" onclick="editRecord('REC-02', 'WebsiteData')"><i class="fa-solid fa-pen"></i></button>
@@ -1195,33 +1106,5 @@
             }
         }
     </script>
-
-<script>
-(function(){
-  const loader=document.getElementById('kksLoader');
-  const hide=()=>{if(loader){loader.classList.add('is-hidden');setTimeout(()=>loader.remove(),650);}};
-  window.addEventListener('load',()=>setTimeout(hide,900),{once:true});
-  setTimeout(hide,4500);
-})();
-
-        // KKS 30-second branded welcome screen
-        let kksLoaderTimer = 30;
-        let kksLoaderInterval = null;
-        function continueToKKSWebsite(){
-            const loader=document.getElementById('kksLoader');
-            if(kksLoaderInterval) clearInterval(kksLoaderInterval);
-            loader.classList.add('is-hidden');
-            setTimeout(()=>loader.remove(),650);
-        }
-        document.addEventListener('DOMContentLoaded', function(){
-            const sec=document.getElementById('kksLoaderSeconds');
-            kksLoaderInterval=setInterval(()=>{
-                kksLoaderTimer--;
-                if(sec) sec.textContent=kksLoaderTimer;
-                if(kksLoaderTimer<=0){ continueToKKSWebsite(); }
-            },1000);
-        });
-
-</script>
 </body>
 </html>
